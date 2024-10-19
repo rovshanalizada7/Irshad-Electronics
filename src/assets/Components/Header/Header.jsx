@@ -7,6 +7,7 @@ import { HiOutlineScale } from "react-icons/hi";
 import { FaCreditCard } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { LuShoppingCart } from "react-icons/lu";
+import "../Header/header.css"
 
 const Header = () => {
   return (
@@ -74,7 +75,7 @@ const Header = () => {
                 <div className="logo" style={{marginRight:"2rem"}}>
                     <img style={{width:"109px",height:"49px"}} src="https://irshad.az/images/svg-icons/logo.svg?v=7" alt="" />
                 </div>
-                <div style={{display:"flex",justifyContent:"center",alignItems:"center"}} >
+                <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"1rem"}} >
                 <a className='kataloq' href=""><IoMdMenu /> Kataloq</a>
                 </div>
                 <div style={{position:"relative",marginRight:"2rem"}}>
