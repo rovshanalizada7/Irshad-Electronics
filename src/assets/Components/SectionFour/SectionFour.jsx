@@ -22,7 +22,7 @@ const SectionFour = () => {
             <div className="SectionFour-products">
                 {activeTab === 'product-review' && (
                     <div className="product-review">
-                        <div className="card">
+                        <div className="kart">
                             <div className="img-color-relative">
                                 <span role='img'><img src='https://img.youtube.com/vi/BDXkW2yPVPc/maxresdefault.jpg'></img></span>
                                 <div class="hover-container">
@@ -38,7 +38,7 @@ const SectionFour = () => {
                                 İcmalı dinlədikcə anladıq ki, bu sezon Galaxy'də əyləncənin ucu-bucağı görünmüyəcək!🤩
                             </p>
                         </div>
-                        <div className="card">
+                        <div className="kart">
                             <div className="img-color-relative">
                                 <span role='img'><img src='https://img.youtube.com/vi/ghGySce348c/maxresdefault.jpg'></img></span>
                                 <div class="hover-container">
@@ -53,7 +53,7 @@ const SectionFour = () => {
                                 Seçdiyin velosipedi 18 aylıq KOMİSSİYASIZ, faizsiz və ilkin ödənişsiz şərtlərlə sənə uyğun ünvandan sifariş edə bilərsən!💚 </p>
 
                         </div>
-                        <div className="card">
+                        <div className="kart">
                             <div className="img-color-relative">
                                 <span role='img'><img src='https://img.youtube.com/vi/LdQKD83LV7k/maxresdefault.jpg'></img></span>
                                 <div class="hover-container">
@@ -74,7 +74,7 @@ const SectionFour = () => {
                     </div>)}
                 {activeTab === 'youtube-review' && (
                     <div className="youtube-review">
-                        <div className="card">
+                        <div className="kart">
                             <div className="img-color-relative">
                                 <span role='img'><img src='https://img.youtube.com/vi/hH8lAgdCBx8/maxresdefault.jpg'></img></span>
                                 <div class="hover-container">
@@ -86,7 +86,7 @@ const SectionFour = () => {
                             </div>
                             <a href='https://irshad.az/mehsul-icmali/artiq-samsung-vaxtidir4-mehsul-bir-arada'>  Bəli, bəli İRŞAD'ın ekspertləri sizin üçün bölür! 😎  </a>
                         </div>
-                        <div className="card">
+                        <div className="kart">
                             <div className="img-color-relative">
                                 <span role='img'><img src='https://img.youtube.com/vi/IlcTzdO4phg/maxresdefault.jpg'></img></span>
                                 <div class="hover-container">
@@ -98,7 +98,7 @@ const SectionFour = () => {
                             </div>
                             <a href='https://irshad.az/mehsul-icmali/artiq-samsung-vaxtidir4-mehsul-bir-arada'> İrşad yenə də təəccübləndirməyə davam edir!😍 </a>
                         </div>
-                        <div className="card">
+                        <div className="kart">
                             <div className="img-color-relative">
                                 <span role='img'><img src='https://img.youtube.com/vi/-aIi-MOXZwg/maxresdefault.jpg'></img></span>
                                 <div class="hover-container">

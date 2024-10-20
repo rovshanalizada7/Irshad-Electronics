@@ -85,7 +85,7 @@
     display: flex;
     justify-content: space-between;
 }
-.SectionFour-products .product-review .card{
+.SectionFour-products .product-review .kart{
     width: 452px;
     height: 573.6px;
     display: flex;
@@ -96,7 +96,7 @@
     padding-right: 10px;
     border: none;
 }
-.SectionFour-products .youtube-review .card{
+.SectionFour-products .youtube-review .kart{
     width: 452px;
     height: 573.6px;
     display: flex;
@@ -166,7 +166,7 @@
     width: 61%;
 }
 
-.SectionFour-products .product-review .card img{
+.SectionFour-products .product-review .kart img{
     width: 432px;
     height: 326px;
     object-fit: cover; 
@@ -175,18 +175,18 @@
     margin: 0 !important;
 }
 
-.SectionFour-products .product-review .card a{
+.SectionFour-products .product-review .kart a{
     width: 426px;
     color: #232d40;
     font-size: 1.3rem;
     font-weight: 600;
     font-family: "Inter", sans-serif;
 }
-.SectionFour-products .product-review .card a:hover{
+.SectionFour-products .product-review .kart a:hover{
    color: #40b659; 
    transition: 0.5s;
 }
-.SectionFour-products .product-review .card p{
+.SectionFour-products .product-review .kart p{
     width: 426px;
     color: #95979c;
     font-size: 14px ;
@@ -197,7 +197,7 @@
 
 /* Youtube review */
 
-.SectionFour-products .youtube-review .card img{
+.SectionFour-products .youtube-review .kart img{
     width: 432px;
     height: 326px;
     object-fit: cover; 
@@ -205,18 +205,18 @@
     cursor: pointer;
 }
 
-.SectionFour-products .youtube-review .card a{
+.SectionFour-products .youtube-review .kart a{
     width: 426px;
     color: #232d40;
     font-size: 1.3rem;
     font-weight: 600;
     font-family: "Inter", sans-serif;
 }
-.SectionFour-products .youtube-review .card a:hover{
+.SectionFour-products .youtube-review .kart a:hover{
    color: #40b659; 
    transition: 0.5s;
 }
-.SectionFour-products .youtube-review .card p{
+.SectionFour-products .youtube-review .kart p{
     width: 426px;
     color: #95979c;
     font-size: 14px ;
