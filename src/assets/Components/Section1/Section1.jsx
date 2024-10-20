@@ -1,6 +1,7 @@
 import React from 'react'
 import "../Section1/section1.css"
 import Carousell from '../Carousel/Carousel'
+import ProductCarousel from '../ProductCarousel/ProductCarousel'
 
 const Section1 = () => {
   return (
@@ -12,7 +13,9 @@ const Section1 = () => {
         <Carousell/>
         </div>
 
-        <div className="section1-discount"></div>
+        <div className="section1-discount">
+          <ProductCarousel/>
+        </div>
 
       </div>
     
