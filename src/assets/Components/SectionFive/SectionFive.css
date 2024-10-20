@@ -31,6 +31,11 @@
       justify-content: space-between;
       
   }
+  .SectionFive-text h2{
+    font-size: 2.1rem;
+    width: 80%;
+    font-weight: 600;
+  }
   .SectionFive-text button {
      width: 225px;
      height: 42px;
@@ -40,7 +45,7 @@
      border-radius: 6px;
      font-weight: 600;
      font-size: 1rem;
-     font-family: "Inter";
+     font-family: "Inter", sans-serif;
      cursor: pointer;
   }
   .SectionFive-text button:hover{
@@ -65,7 +70,7 @@
   }
   .SectionFive-qr p {
       font-size: 16px;
-      font-family: 'Inter';
+      font-family: "Inter", sans-serif;
      
   }
   .SectionFive-qr{
