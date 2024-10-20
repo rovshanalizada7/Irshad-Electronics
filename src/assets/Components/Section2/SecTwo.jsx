@@ -11,7 +11,7 @@ const SecTwo = () => {
                     <a className='popular' href="">Populyar məhsullar</a>
                     <a className='new' href="">Yeni məhsullar</a>
                 </div>
-                <Carousel2 apiUrl="https://fakestoreapi.com/products" />
+                <Carousel2 apiUrl="https://6714c8de690bf212c7627430.mockapi.io/phones" />
                 <Mark />
             </div>
         </section>
