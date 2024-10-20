@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { LuUser } from "react-icons/lu";
 import { IoMdMenu } from "react-icons/io";
@@ -11,34 +11,39 @@ import "../Header/header.css"
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [wishlistCount, setWishlistCount] = useState(0); 
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const toggleModal = () => {
+        setModalOpen(!isModalOpen);
+    };
+
+    useEffect(() => {
+        const count = JSON.parse(localStorage.getItem('wishlist'))?.length || 0;
+        setWishlistCount(count);
+    }, []);
     const containerStyle = {
         display: 'flex',
         justifyContent: 'space-around',
         padding: '20px',
         fontFamily: 'Arial, sans-serif',
-        // backgroundColor: '#f4f4f4',
     };
 
     const columnStyle = {
         flex: 1,
         margin: '0 15px',
-        // backgroundColor: '#fff',
         padding: '10px',
         borderRadius: '8px',
-        // boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
     };
 
     const headerStyle = {
         fontSize: '14px',
         marginBottom: '10px',
         fontWeight: 'bold',
-        // backgroundColor: '#f7f7f7',
-        // borderBottom: '2px solid #e0e0e0',
         paddingBottom: '5px',
         width: '30%',
         color: '#333',
-        // borderBottom: '2px solid #e0e0e0',
         paddingBottom: '5px',
 
     };
@@ -54,10 +59,7 @@ const Header = () => {
         color: '#555',
     };
 
-    const [isModalOpen, setModalOpen] = useState(false);
-    const toggleModal = () => {
-        setModalOpen(!isModalOpen);
-    };
+    
 
     return (
 
@@ -145,7 +147,7 @@ const Header = () => {
                                         flexDirection: "column",
                                         position: "absolute",
                                         left: "6.5%",
-                                        top: "23.5%",
+                                        top: "23%",
                                         alignItems: "flex-start",
                                         zIndex: "10",
                                         height: "auto",
@@ -324,9 +326,31 @@ const Header = () => {
                             <span style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Müqayisə</span>
                         </div>
 
-                        <div onClick={() => navigate("/wishList")} className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
-                            <FaRegHeart className='tools-icon' style={{ fontSize: "24px" }} />
-                            <span style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Bəyəndim</span>
+                        <div onClick={() => navigate("/wishList")} className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px", position: "relative" }}>
+                            {wishlistCount > 0 ? (
+                                <FaRegHeart className='tools-icon' style={{ fontSize: "24px" }} />
+                            ) : (
+                                <FaRegHeart className='tools-icon' style={{ fontSize: "24px" }} />
+                            )}
+                            <span style={{ fontFamily: "Inter, sans-serif", fontSize: "14px" }}>Bəyəndim</span>
+                            {wishlistCount > 0 && (
+                                <span className="wishlist-count" style={{
+                                    position: "absolute",
+                                    top: "-7px",
+                                    right: "10px",
+                                    backgroundColor: "orange",
+                                    color: "white",
+                                    borderRadius: "50%",
+                                    width: "18px",
+                                    height: "18px",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    fontSize: "12px"
+                                }}>
+                                    {wishlistCount}
+                                </span>
+                            )}
                         </div>
 
                         <div className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
