@@ -12,6 +12,10 @@
     position: relative;
 }
 
+.products-swip{
+    margin-top: 30px;
+}
+
 .products-swip .popular-products .title {
     display: flex;
     gap: 20px;

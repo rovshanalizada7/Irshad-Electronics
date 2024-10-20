@@ -14,12 +14,12 @@ const Card = ({ product }) => {
                 <FaHeart className='heart-icon'/>
             </div>
             <div className="image">
-                <img src={product.image} alt={product.title} /> 
+                <img src={product.image} alt={product.name} /> 
             </div>
             <div className="product-content">
                 <span className="category">{product.category}</span> 
                 <h2 className='product-name'>
-                    <a href="">{product.title}</a> 
+                    <a href="">{product.name}</a> 
                 </h2>
                 <div className="circle"></div>
                 <ul className="stars">
@@ -42,7 +42,7 @@ const Card = ({ product }) => {
                 </div>
                 <div className="price-and-month">
                     <div className="price">
-                        <span>${product.price}</span> 
+                        <span>{product.price} AZN</span> 
                     </div>
                     <div className="month">
                         <p><span>12</span><span>ay</span></p>
