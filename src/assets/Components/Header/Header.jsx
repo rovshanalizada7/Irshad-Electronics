@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { LuUser } from "react-icons/lu";
 import { IoMdMenu } from "react-icons/io";
@@ -10,7 +10,14 @@ import { LuShoppingCart } from "react-icons/lu";
 import "../Header/header.css"
 
 const Header = () => {
+
+    const [isModalOpen, setModalOpen] = useState(false);
+    const toggleModal = () => {
+      setModalOpen(!isModalOpen);
+    };
+
     return (
+
         <header>
 
             <div className="header-top">
@@ -76,88 +83,97 @@ const Header = () => {
                         <img style={{ width: "109px", height: "49px" }} src="https://irshad.az/images/svg-icons/logo.svg?v=7" alt="" />
                     </div>
 
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginRight: "1rem" }} >
-                        <a className='kataloq' href=""><IoMdMenu style={{ fontSize: "22px" }} /> Kataloq</a>
+                    <div>
+                        
+                        <div
+                            id='kataloqClick'
+                            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '1rem' }}
+                            onClick={toggleModal} 
+                        >
+                            <a className='kataloq' href="#"><IoMdMenu style={{ fontSize: '22px' }} /> Kataloq</a>
+                        </div>
+
+                        
+                        {isModalOpen && ( 
+                            <div className="katalog-modal">
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        position: "absolute",
+                                        left: "6.5%",
+                                        top: "23.5%",
+                                        alignItems: "flex-start",
+                                        zIndex: "10",
+                                        height: "auto",
+                                        width: "345px",
+                                        backgroundColor: "#f7f7f7",
+                                        borderRadius: "5px",
+                                        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+                                        overflowY: "auto",
+                                        maxHeight: "493px",
+                                        scrollbarWidth: "thin",
+                                        padding: "10px"
+                                    }}
+                                >
+                                    <ul
+                                        style={{
+                                            fontFamily: "Inter, sans-serif",
+                                            margin: "0",
+                                            padding: "0",
+                                            listStyleType: "none",
+                                            fontSize: "16px",
+                                            fontWeight: "bolder",
+                                            width: "100%",
+                                        }}
+                                    >
+                                        {[
+                                            { name: "Yalnız online məhsullar", img: "https://irshad.az/images/svg-icons/online.svg" },
+                                            { name: "Telefon və aksessuarlar", img: "https://irshad.az/storage/product-categories/1/1.svg" },
+                                            { name: "Böyük məişət texnikası", img: "https://irshad.az/storage/product-categories/27/icons8-appliances-1-1.svg" },
+                                            { name: "Kiçik məişət texnikası", img: "https://irshad.az/storage/product-categories/2287/icons8-microwave-1.svg" },
+                                            { name: "TV və Audio", img: "https://irshad.az/storage/product-categories/36/3.svg" },
+                                            { name: "Foto texnika", img: "https://irshad.az/storage/product-categories/2288/icons8-camera-1.svg" },
+                                            { name: "Notbuk, planşet və kompüter texnikası", img: "https://irshad.az/storage/product-categories/38/4.svg" },
+                                            { name: "Outlet", img: "https://irshad.az/storage/product-categories/2665/outlet-icon.svg" },
+                                            { name: "Evə uyğun məhsullar", img: "https://irshad.az/storage/product-categories/519/5.svg" },
+                                            { name: "Mebellər və tekstil", img: "https://irshad.az/storage/product-categories/2290/icons8-furniture-1.svg" },
+                                            { name: "Nəqliyyat və Əyləncə", img: "https://irshad.az/storage/product-categories/520/6.svg" },
+                                            { name: "Avtomobil üçün məhsullar", img: "https://irshad.az/storage/product-categories/2280/icons8-fiat-500-1.svg" },
+                                            { name: "İdman və sağlamlıq", img: "https://irshad.az/storage/product-categories/532/8.svg" },
+                                            { name: "İnşaat", img: "https://irshad.az/storage/product-categories/1103/inshaat.svg" },
+                                            { name: "Dəftərxana Ləvazimatları", img: "https://irshad.az/storage/product-categories/2286/icons8-moleskine-1-1.svg" },
+                                            { name: "Musiqi avadanlıqları", img: "https://irshad.az/storage/product-categories/2289/icons8-guitar-1.svg" },
+                                            { name: "Şəxsi əşyalar", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" },
+                                            { name: "Zinət əşyaları", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" }
+                                        ].map((item, index) => (
+                                            <li
+                                                key={index}
+                                                style={{
+                                                    position: "relative",
+                                                    padding: "0.8rem 0.5rem",
+                                                    cursor: "pointer",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    width: "100%",
+                                                    transition: "background-color 0.3s ease",
+                                                }}
+                                                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f0f0f0")}
+                                                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+                                            >
+                                                <img
+                                                    src={item.img}
+                                                    alt={item.name}
+                                                    style={{ width: "24px", height: "24px", marginRight: "10px" }}
+                                                />
+                                                {item.name}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
                     </div>
-
-                    <div className="katalog-modal">
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column", 
-      position: "absolute",
-      left: "6.5%",
-      top: "23.5%",
-      alignItems: "flex-start", 
-      zIndex: "10",
-      height: "auto", 
-      width: "345px",
-      backgroundColor: "#f7f7f7",
-      borderRadius: "5px",
-      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
-      overflowY: "auto",
-      maxHeight: "493px",
-      scrollbarWidth: "thin",
-      padding: "10px" 
-    }}
-  >
-    <ul
-      style={{
-        fontFamily: "Inter, sans-serif",
-        margin: "0", 
-        padding: "0", 
-        listStyleType: "none", 
-        fontSize: "16px",
-        fontWeight: "bolder",
-        width: "100%", 
-      }}
-    >
-      {[
-        { name: "Yalnız online məhsullar", img: "https://irshad.az/images/svg-icons/online.svg" },
-        { name: "Telefon və aksessuarlar", img: "https://irshad.az/storage/product-categories/1/1.svg" },
-        { name: "Böyük məişət texnikası", img: "https://irshad.az/storage/product-categories/27/icons8-appliances-1-1.svg" },
-        { name: "Kiçik məişət texnikası", img: "https://irshad.az/storage/product-categories/2287/icons8-microwave-1.svg" },
-        { name: "TV və Audio", img: "https://irshad.az/storage/product-categories/36/3.svg" },
-        { name: "Foto texnika", img: "https://irshad.az/storage/product-categories/2288/icons8-camera-1.svg" },
-        { name: "Notbuk, planşet və kompüter texnikası", img: "https://irshad.az/storage/product-categories/38/4.svg" },
-        { name: "Outlet", img: "https://irshad.az/storage/product-categories/2665/outlet-icon.svg" },
-        { name: "Evə uyğun məhsullar", img: "https://irshad.az/storage/product-categories/519/5.svg" },
-        { name: "Mebellər və tekstil", img: "https://irshad.az/storage/product-categories/2290/icons8-furniture-1.svg" },
-        { name: "Nəqliyyat və Əyləncə", img: "https://irshad.az/storage/product-categories/520/6.svg" },
-        { name: "Avtomobil üçün məhsullar", img: "https://irshad.az/storage/product-categories/2280/icons8-fiat-500-1.svg" },
-        { name: "İdman və sağlamlıq", img: "https://irshad.az/storage/product-categories/532/8.svg" },
-        { name: "İnşaat", img: "https://irshad.az/storage/product-categories/1103/inshaat.svg" },
-        { name: "Dəftərxana Ləvazimatları", img: "https://irshad.az/storage/product-categories/2286/icons8-moleskine-1-1.svg" },
-        { name: "Musiqi avadanlıqları", img: "https://irshad.az/storage/product-categories/2289/icons8-guitar-1.svg" },
-        { name: "Şəxsi əşyalar", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" },
-        { name: "Zinət əşyaları", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" }
-      ].map((item, index) => (
-        <li
-  key={index}
-  style={{
-    position: "relative",
-    padding: "0.8rem 0.5rem",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    width: "100%",
-    transition: "background-color 0.3s ease", 
-  }}
-  onMouseEnter={(e) => (e.currentTarget.style.dColor = "#f0f0f0")}
-  onMouseLeave={(e) => (e.currentTarget.style.dColor = "transparent")}
->
-  <img
-    src={item.img}
-    alt={item.name}
-    style={{ width: "24px", height: "24px", marginRight: "10px" }}
-  />
-  {item.name}
-</li>
-
-      ))}
-    </ul>
-  </div>
-</div>
 
 
 
