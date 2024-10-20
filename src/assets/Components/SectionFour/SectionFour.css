@@ -24,7 +24,11 @@
 
 .SectionFour-title .titles h2 {
     display: flex;
-    gap: 20px
+    gap: 20px;
+
+}
+.SectionFour-title .titles h2 a{
+    cursor: pointer;
 }
 
 .SectionFour-title .titles a {

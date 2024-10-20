@@ -11,8 +11,8 @@ const SectionFour = () => {
             <div className="SectionFour-title">
                 <div className="titles">
                     <h2>
-                        <a href="#" className={activeTab === 'product-review' ? 'active' : ''} onClick={() => setActiveTab('product-review')} > Məhsul icmalı </a>
-                        <a href="#" className={activeTab === 'youtube-review' ? 'active' : ''} onClick={() => setActiveTab('youtube-review')} >  İrşad Youtube </a>
+                        <a className={activeTab === 'product-review' ? 'active' : ''} onClick={() => setActiveTab('product-review')} > Məhsul icmalı </a>
+                        <a className={activeTab === 'youtube-review' ? 'active' : ''} onClick={() => setActiveTab('youtube-review')} >  İrşad Youtube </a>
                     </h2>
                 </div>
                 <div className="youtube-link">
