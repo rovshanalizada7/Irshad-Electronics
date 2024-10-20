@@ -1,0 +1,34 @@
+* {
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.products-swip .popular-products {
+    margin: 0 auto;
+    width: 87%;
+    position: relative;
+}
+
+.products-swip{
+    margin-top: 30px;
+}
+
+.products-swip .popular-products .title {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.products-swip .popular-products .title a {
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+}
+
+.products-swip .popular-products .new {
+    opacity: 0.5;
+}

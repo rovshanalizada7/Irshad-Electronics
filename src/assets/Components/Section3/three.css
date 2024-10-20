@@ -1,0 +1,27 @@
+.discounted-swip .title {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px;
+    padding: 20px 0px;
+}
+
+.discounted-swip{
+    margin-bottom: 30px;
+}
+
+.discounted-swip .title a {
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+}
+
+.discounted-swip .title .new{
+    opacity: 0.5;
+}
+
+.discounted-products{
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 87%;
+    position: relative;
+}

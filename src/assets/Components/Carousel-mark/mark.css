@@ -1,0 +1,25 @@
+.mark-slide{
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.mark-slide .swip-2{
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.swip-2 .mark-img{
+    border: 2px solid rgba(0, 0, 0, 0.116);
+    border-radius: 5px;
+    width: 200px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swip-2 .mark-img img{
+    max-width: 190px;
+    max-height: 50px;
+    object-fit: cover;
+}

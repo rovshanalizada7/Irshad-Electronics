@@ -1,0 +1,116 @@
+.product-card{
+    height: 100%;
+    width: 100%;
+    background-color: #ffd436;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   
+   .product-title{
+       width: 94%;
+       height: 15%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       /* background-color: aqua; */
+   }
+   .product-info{
+       height: 85%;
+       width: 98%;
+       background-color: #fff;
+       margin-bottom: 5px;
+       border-radius: 0px 0px 10px 10px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .info-content{
+       width: 90%;
+       height: 90%;
+   }
+   .content-top {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .content-top h3 {
+       padding-top: 10px;
+       font-size:18px ;
+       font-weight: bold;
+   }
+   .content-middle{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 100%;
+   }
+   .product__label--purple{
+     color: #1743df!important;
+     background-color: rgba(23,67,223,.07);
+     border: none;
+     font-size: 12px;
+     padding: 3px 4px;
+     border-radius: 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   .product__label--orange{
+       background: rgba(246, 134, 31, .07);
+       color: #f6861f !important;
+       border: none;
+       border-radius: 4px;
+       font-size: 12px;
+       padding: 5px;
+   }
+   .content-bottom{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   
+   .old-price{
+       color: hsl(223, 3%, 60%);
+       font-size: 13px;
+       font-weight: 600;
+       line-height: 1.6rem;
+       margin-bottom: 2px;
+       text-decoration: line-through !important;
+   }
+   .new-price{
+       font-size: 28px;
+       color: #232d40;
+       font-weight: 600;
+   }
+   .one-click{
+     padding:1rem;  
+     font-size: 16px;
+     background-color: #f6861f;
+     color: #fff;
+     border-radius: 10px;
+       border: 1px solid currentColor;
+    font-weight: 600;
+    margin-right: 10px;
+   }
+   .one-click:hover{
+       background-color: #fff;
+       color: #f6861f;
+       transition: .5s;
+       cursor: pointer;
+   }
+   .shopping{
+    background-color: #40b659;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+   }
+   .shopping:hover{
+       background-color: #fff;
+    color: #40b659;
+    transition: .5s;
+    cursor: pointer;
+    border: 1px solid #40b659;
+   }
+   

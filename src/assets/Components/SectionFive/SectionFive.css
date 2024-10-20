@@ -1,0 +1,86 @@
+
+/* 206 */
+
+.SectionFive{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 460px;
+  }
+  
+  .SectionFive-container{
+      display: flex;
+      align-items: center;
+      background: #393e4a;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1.6rem;
+      justify-content: center;
+      font-family: "Inter";
+      height: 412px;
+      position: relative;
+      width: 87%;
+      flex-wrap: wrap;
+  }
+  .SectionFive-text{
+      color: white;
+      width: 854px;
+      display: flex;
+      flex-direction: column;
+      height: 13rem;
+      justify-content: space-between;
+      
+  }
+  .SectionFive-text button {
+     width: 225px;
+     height: 42px;
+     background-color: #40b659;
+     border: none;
+     color: white;
+     border-radius: 6px;
+     font-weight: 600;
+     font-size: 1rem;
+     font-family: "Inter";
+     cursor: pointer;
+  }
+  .SectionFive-text button:hover{
+      color: #40b659;
+      border: 1px solid #40b659;
+      background-color: #393e4a;
+      transition: 0.5s;
+  }
+  .SectionFive-qr img{
+      width: 206px;
+      height: 206px;
+  }
+  .SectionFive-qr .img{
+      width: 230px;
+      height: 230px;
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .SectionFive-qr p {
+      font-size: 16px;
+      font-family: 'Inter';
+     
+  }
+  .SectionFive-qr{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-right: 6rem;
+  }
+  .irshad-line{
+      position: absolute;
+      bottom: 1rem;
+      right: 0;
+      left: 0;
+  }
+  .irshad-line img{
+      width: 100%;
+  }
+  
