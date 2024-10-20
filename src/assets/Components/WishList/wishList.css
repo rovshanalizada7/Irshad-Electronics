@@ -1,0 +1,111 @@
+.favorites-section{
+   width: 600px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.favorites-section ul {
+    height: 21px;
+    width: 87%;
+    display: flex;
+    padding-left: 0;
+}
+.favorite-top{
+    height: 57px;
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.addToBasket{
+    color: #fff;
+    background: #40b659;
+    border-radius: 6px;
+    border: 1px solid currentColor;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 1rem 1.2rem;
+    align-items: center;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.addToBasket:hover{
+    color: #40b659;
+    background: #fff;
+    border: 1px solid #40b659;   
+}
+
+.favorite-product{
+    height: 304px;
+    width: 87%;
+    border: 1px solid rgb(206, 206, 206);
+    margin-bottom: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.favorite-product:hover{
+    scale: 1.01;
+    box-shadow: 10px 10px 10px grey;
+    cursor: pointer;
+}
+.favorite-product-content{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #40b659; */
+}
+.product-image{
+    width: 296px;
+    height: 238px;
+    /* background-color: #541f1f; */
+}
+.product-details{
+    width: 600px;
+    height: 238px;
+    /* background-color: aqua; */
+}
+.product-price{
+    width: 300px;
+    height: 238px;
+    /* background-color: #805e5e; */
+}
+
+.product-price span{
+    color: #3192ec!important;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    padding: .3rem 1rem;
+    border-radius: 4px;
+    margin-bottom: .8rem;
+    border: 1px solid currentColor;
+    margin-right: 1rem;
+}
+
+.product-price button{
+    color: #fff;
+    background: #40b659;
+    border-radius: 6px;
+    border: 1px solid currentColor;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 1.1rem 4rem;
+    align-items: center;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.product-price button:hover{
+    color: #40b659;
+    background: #fff; 
+    border: 1px solid #40b659;
+}

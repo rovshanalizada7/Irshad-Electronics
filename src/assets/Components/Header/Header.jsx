@@ -8,12 +8,55 @@ import { FaCreditCard } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { LuShoppingCart } from "react-icons/lu";
 import "../Header/header.css"
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+    const navigate = useNavigate()
+    const containerStyle = {
+        display: 'flex',
+        justifyContent: 'space-around',
+        padding: '20px',
+        fontFamily: 'Arial, sans-serif',
+        // backgroundColor: '#f4f4f4',
+    };
+
+    const columnStyle = {
+        flex: 1,
+        margin: '0 15px',
+        // backgroundColor: '#fff',
+        padding: '10px',
+        borderRadius: '8px',
+        // boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+    };
+
+    const headerStyle = {
+        fontSize: '14px',
+        marginBottom: '10px',
+        fontWeight: 'bold',
+        // backgroundColor: '#f7f7f7',
+        // borderBottom: '2px solid #e0e0e0',
+        paddingBottom: '5px',
+        width: '30%',
+        color: '#333',
+        // borderBottom: '2px solid #e0e0e0',
+        paddingBottom: '5px',
+
+    };
+
+    const listStyle = {
+        listStyleType: 'none',
+        padding: 0,
+        fontSize: "13px"
+    };
+
+    const listItemStyle = {
+        marginBottom: '5px',
+        color: '#555',
+    };
 
     const [isModalOpen, setModalOpen] = useState(false);
     const toggleModal = () => {
-      setModalOpen(!isModalOpen);
+        setModalOpen(!isModalOpen);
     };
 
     return (
@@ -79,22 +122,22 @@ const Header = () => {
             <div className="header-bottom">
 
                 <div className="header-bottom-content">
-                    <div className="logo" style={{ marginRight: "2rem" }}>
+                    <div onClick={() => navigate("/")} className="logo" style={{ marginRight: "2rem", cursor: "pointer" }}>
                         <img style={{ width: "109px", height: "49px" }} src="https://irshad.az/images/svg-icons/logo.svg?v=7" alt="" />
                     </div>
 
                     <div>
-                        
+
                         <div
                             id='kataloqClick'
                             style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '1rem' }}
-                            onClick={toggleModal} 
+                            onClick={toggleModal}
                         >
                             <a className='kataloq' href="#"><IoMdMenu style={{ fontSize: '22px' }} /> Kataloq</a>
                         </div>
 
-                        
-                        {isModalOpen && ( 
+
+                        {isModalOpen && (
                             <div className="katalog-modal">
                                 <div
                                     style={{
@@ -175,7 +218,98 @@ const Header = () => {
                         )}
                     </div>
 
+                    <div className="hover-catalog" style={{
+                        display: "none",
+                        flexDirection: "column",
+                        position: "absolute",
+                        // left: "",
+                        left: "29.2%",
+                        top: "23.5%",
+                        alignItems: "flex-start",
+                        zIndex: "10",
+                        height: "493px",
+                        width: "1000px",
+                        backgroundColor: "#f7f7f7",
+                        borderRadius: "5px",
+                        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+                        overflowY: "auto",
+                        maxHeight: "493px",
+                        scrollbarWidth: "thin",
+                        padding: "10px"
+                    }}>
 
+                        <div style={containerStyle}>
+                            <div style={columnStyle}>
+                                <h3 style={headerStyle}>Mobil telefonlar</h3>
+                                <ul style={listStyle}>
+                                    {['Apple', 'HONOR', 'Samsung', 'Xiaomi', 'Poco', 'Nokia', 'Oppo', 'Itel', 'F+', 'TCL', 'Infinix', 'Motorola', 'Blackview', 'Energizer'].map((item, index) => (
+                                        <li key={index} style={listItemStyle}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div style={columnStyle}>
+                                <h3 style={headerStyle}>Telefon aksesuarları</h3>
+                                <ul style={listStyle}>
+                                    {['Adapter USB', 'Adapter simsiz', 'Telefon qabları', 'Ekran Qoruyucu', 'Yaddaş kartı', 'Power Bank', 'USB', 'Açarlıq', 'Stilus', 'Monopod', 'Nömrə ötürücü', 'Qulaqlıq qabları', 'Ştativli Led işıq', 'Mikrofon'].map((item, index) => (
+                                        <li key={index} style={listItemStyle}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div style={columnStyle}>
+                                <h3 style={headerStyle}>Qulaqlıqlar</h3>
+                                <ul style={listStyle}>
+                                    {['Apple', 'Samsung', 'Xiaomi', 'HONOR', 'A4tech', 'Baseus', 'Beats', 'Celebrat', 'JBL', 'Marshall', 'Porodo', 'QCY', 'Remax', 'Skullcandy', 'TCL', 'The House of Marley', 'Aiwa', 'Lenovo', 'Borofone', 'Razer', 'Monster', 'Redmi', 'Edifier'].map((item, index) => (
+                                        <li key={index} style={listItemStyle}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div style={columnStyle}>
+                                <h3 style={headerStyle}>Elektron kitab</h3>
+                                <ul style={listStyle}>
+                                    <li style={listItemStyle}>PocketBook</li>
+                                </ul>
+                                <h3 style={headerStyle}>Elektron kitab üçün qab</h3>
+                                <ul style={listStyle}>
+                                    <li style={listItemStyle}>PocketBook</li>
+                                </ul>
+                                <h3 style={headerStyle}>Uşaq saatları</h3>
+                                <ul style={listStyle}>
+                                    <li style={listItemStyle}>Wonlex</li>
+                                </ul>
+                            </div>
+
+                            <div style={columnStyle}>
+                                <h3 style={headerStyle}>Smart saatlar</h3>
+                                <ul style={listStyle}>
+                                    {['Apple', 'Samsung', 'HONOR', 'Xiaomi', 'Haylou', 'Mibro', 'Wonlex'].map((item, index) => (
+                                        <li key={index} style={listItemStyle}>{item}</li>
+                                    ))}
+                                </ul>
+                                <h3 style={headerStyle}>Qolbaqlar</h3>
+                                <ul style={listStyle}>
+                                    {['Samsung', 'Xiaomi', 'HONOR'].map((item, index) => (
+                                        <li key={index} style={listItemStyle}>{item}</li>
+                                    ))}
+                                </ul>
+                                <h3 style={headerStyle}>Stasionar telefonlar</h3>
+                                <ul style={listStyle}>
+                                    <li style={listItemStyle}>Panasonic</li>
+                                </ul>
+                            </div>
+
+                            <div style={columnStyle}>
+                                <h3 style={headerStyle}>Saatlar</h3>
+                                <ul style={listStyle}>
+                                    {['Casio', 'Orient', 'Cover', 'Q&Q', 'Ingersoll', 'VMF', 'Frederique Constant', 'Sharg Gold', 'Amalys', 'Jacques Lemans'].map((item, index) => (
+                                        <li key={index} style={listItemStyle}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
 
 
@@ -190,7 +324,7 @@ const Header = () => {
                             <span style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Müqayisə</span>
                         </div>
 
-                        <div className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+                        <div onClick={() => navigate("/wishList")} className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
                             <FaRegHeart className='tools-icon' style={{ fontSize: "24px" }} />
                             <span style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Bəyəndim</span>
                         </div>

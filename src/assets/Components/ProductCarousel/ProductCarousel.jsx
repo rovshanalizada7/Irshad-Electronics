@@ -1,6 +1,7 @@
 import React from 'react'
 import "../ProductCarousel/productCarousel.css"
 import { MdOutlineShoppingCart } from "react-icons/md";
+import CountdownTimer from '../Timer/Timer';
 
 const ProductCarousel = () => {
   return (
@@ -8,7 +9,7 @@ const ProductCarousel = () => {
 
         <div className="product-title">
             <span style={{fontWeight:"600"}} >Həftənin təklifi</span>
-            <span style={{fontWeight:"600"}}>Saat</span>
+            <span style={{fontWeight:"600"}}><CountdownTimer/></span>
         </div>
 
         <div className="product-info">

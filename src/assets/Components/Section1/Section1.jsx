@@ -30,7 +30,7 @@ const Section1 = () => {
       <Carousel.Item interval={1500}>
       <ProductCarousel/>
       </Carousel.Item>
-    </Carousel>
+     </Carousel>
         </div>
 
       </div>
