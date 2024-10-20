@@ -12,7 +12,7 @@ const SectionFour = () => {
                 <div className="titles">
                     <h2>
                         <a href="#" className={activeTab === 'product-review' ? 'active' : ''} onClick={() => setActiveTab('product-review')} > Məhsul icmalı </a>
-                        <a href="https://www.youtube.com/@irshad"  > İrşad Youtube </a>
+                        <a href="#" className={activeTab === 'youtube-review' ? 'active' : ''} onClick={() => setActiveTab('youtube-review')} >  İrşad Youtube </a>
                     </h2>
                 </div>
                 <div className="youtube-link">

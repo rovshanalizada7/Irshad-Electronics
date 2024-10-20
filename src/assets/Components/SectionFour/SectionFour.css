@@ -30,12 +30,13 @@
 .SectionFour-title .titles a {
     font-family: "Inter", sans-serif;  
     font-size: 36px;
-    color: #BDC0C5;
-    font-weight: 600;  
+    color: #7F7F7F;
+ 
 }
 
 .SectionFour-title .titles a.active{
     color: #232d40;
+
 }
 
 
@@ -191,7 +192,7 @@
     width: 426px;
     color: #95979c;
     font-size: 14px ;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.4rem;
     font-family: 'Inter',sans-serif;
 }
@@ -230,7 +231,6 @@
 }
 
 a.active {
-    font-weight: bold;
     color:#232d40;
   }
   
