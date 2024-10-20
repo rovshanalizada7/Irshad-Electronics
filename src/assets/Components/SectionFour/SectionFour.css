@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+.SectionFour-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 87%;
+}
+
+.SectionFour {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.SectionFour-title .titles h2 {
+    display: flex;
+    gap: 20px
+}
+
+.SectionFour-title .titles a {
+    font-family: "Inter", sans-serif;  
+    font-size: 36px;
+    color: #BDC0C5;
+    font-weight: 600;  
+}
+
+.SectionFour-title .titles a.active{
+    color: #232d40;
+}
+
+
+
+
+/* 243 48 */
+
+.SectionFour-title .youtube-link:hover a{
+    background-color: white;
+    border: 1px solid #F23620;
+    color: red;
+    transition: 0.5s;
+}
+
+/* 243 48 */
+.SectionFour-title .youtube-link a{
+    color: white;
+    width: 243px;
+    height: 42px;
+    background-color: #F23620;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 600;
+
+}
+
+#youtube{
+    font-size: 20px;
+}
+
+
+
+
+/* PRODUCTS*/
+
+
+.SectionFour-products{
+    width: 87%;
+    display: flex;
+    justify-content: center;
+
+}
+.SectionFour-products .product-review{
+    display: flex;
+    justify-content: space-between;
+}
+.SectionFour-products .product-review .card{
+    width: 452px;
+    height: 573.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+.SectionFour-products .youtube-review .card{
+    width: 452px;
+    height: 573.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.img-color-relative{
+    position: relative; 
+}
+
+.img-color {
+    position: absolute;
+    width: 432px;
+    height: 327px;
+    background: #000;
+    opacity: .3;
+    top: 0;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+
+.play-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background-color: #fff;
+    background-image: url('https://irshad.az/images/svg-icons/play-btn.svg');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 1.9rem center;
+    z-index: 3;
+    transition: background-color 0.2s, width 0.2s, height 0.2s;
+}
+
+
+.hover-container:hover .img-color {
+    background: #40B659;
+    opacity: .3;
+    cursor: pointer;
+}
+
+.hover-container:hover .play-item {
+    background-color: #fff;
+    width: 210px;
+    height: 80px;
+    color: #232d40;
+    cursor: pointer;
+}
+
+.hover-container:hover .play-item::after {
+    content: "Videonu izlə";
+    position: absolute;
+    top: 38%;
+    left: 33%;
+    color: #232d40;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    width: 61%;
+}
+
+.SectionFour-products .product-review .card img{
+    width: 432px;
+    height: 326px;
+    object-fit: cover; 
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+.SectionFour-products .product-review .card a{
+    width: 426px;
+    color: #232d40;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+.SectionFour-products .product-review .card a:hover{
+   color: #40b659; 
+   transition: 0.5s;
+}
+.SectionFour-products .product-review .card p{
+    width: 426px;
+    color: #95979c;
+    font-size: 14px ;
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-family: 'Inter',sans-serif;
+}
+
+/* Youtube review */
+
+.SectionFour-products .youtube-review .card img{
+    width: 432px;
+    height: 326px;
+    object-fit: cover; 
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.SectionFour-products .youtube-review .card a{
+    width: 426px;
+    color: #232d40;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+.SectionFour-products .youtube-review .card a:hover{
+   color: #40b659; 
+   transition: 0.5s;
+}
+.SectionFour-products .youtube-review .card p{
+    width: 426px;
+    color: #95979c;
+    font-size: 14px ;
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-family: 'Inter',sans-serif;
+}
+.SectionFour-products .youtube-review{
+    display: flex;
+}
+
+a.active {
+    font-weight: bold;
+    color:#232d40;
+  }
+  
+  .product-review, .youtube-review {
+    display: none;
+  }
+  
+  .product-review {
+    display: block;
+  }
+  .youtube-review {
+    display: block;
+  }
+  

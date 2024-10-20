@@ -76,7 +76,7 @@ const Header = () => {
                     <img style={{width:"109px",height:"49px"}} src="https://irshad.az/images/svg-icons/logo.svg?v=7" alt="" />
                 </div>
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginRight:"1rem"}} >
-                <a className='kataloq' href=""><IoMdMenu /> Kataloq</a>
+                <a className='kataloq' href=""><IoMdMenu style={{fontSize:"22px"}} /> Kataloq</a>
                 </div>
                 <div style={{position:"relative",marginRight:"2rem"}}>
                 <input  className='search-inp' type="text" placeholder='Search' />

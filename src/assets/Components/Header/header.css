@@ -36,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
   }
   .first3-lists{
     color: #5b5f66;
@@ -103,12 +104,11 @@
     /* background-color: blue; */
   }
   .kataloq{
-      padding: 1rem 1.2rem;
+      padding: 1rem 1rem !important;
       border-radius: .5rem;
       background: #40b659;
       color: #fff;
-      font-size: 15px;
-      
+      font-size: 16px !important;
       margin-bottom: 0;
       cursor: pointer;
       width: 120px;
