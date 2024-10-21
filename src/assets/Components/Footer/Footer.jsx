@@ -13,8 +13,11 @@ import app from './apps/image-app.png';
 
 
 import './footer.css'
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer>
       <div className="foot-container">
@@ -41,13 +44,13 @@ const Footer = () => {
           <div className="right">
             <h3>Müştəri üçün</h3>
             <ul>
-              <li><a href="">Sual-Cavab</a></li>
+              <li><a href="" onClick={() => navigate("/sual&cavab")}>Sual-Cavab</a></li>
               <li><a href="">Hissə-hissə ödəniş</a></li>
               <li><a href="">Məxfilik siyasəti</a></li>
               <li><a href="">Korporativ satışlar</a></li>
               <li><a href="">İstifadə qaydaları</a></li>
               <li><a href="">Bloq</a></li>
-              <li><a href="">Şikayət və təkliflər</a></li>
+              <li><a href="" onClick={() => navigate("/shikayet&ve&teklifler")}>Şikayət və təkliflər</a></li>
             </ul>
           </div>
         </div>
