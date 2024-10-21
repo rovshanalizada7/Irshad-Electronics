@@ -22,6 +22,36 @@ const Wishlist = () => {
         setWishlist(updatedWishlist);
     };
 
+    const addAllToCart = () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        wishlist.forEach(product => {
+            const existingProduct = cart.find(item => item.id === product.id);
+            if (existingProduct) {
+                existingProduct.count += 1;
+            } else {
+                cart.push({ ...product, count: 1 }); 
+            }
+        });
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert("Bütün məhsullar səbətə əlavə olundu!");
+    };
+
+    const addToCart = (product) => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingProduct = cart.find(item => item.id === product.id);
+
+        if (existingProduct) {
+            existingProduct.count += 1; 
+        } else {
+            cart.push({ ...product, count: 1 }); 
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${product.name} səbətə əlavə olundu!`);
+    };
+
     return (
         <div>
             <Header />
@@ -33,11 +63,13 @@ const Wishlist = () => {
 
                 <div className="favorite-top">
                     <span style={{ color: "#232d40", fontSize: "28px" }}>Bəyəndiklərim</span>
-                    <a className='addToBasket' href=""><MdOutlineShoppingCart style={{ fontSize: "23px" }} /> Bütün məhsulları səbətə əlavə et </a>
+                    <button className='addToBasket' onClick={addAllToCart}>
+                        <MdOutlineShoppingCart style={{ fontSize: "23px" }} /> Bütün məhsulları səbətə əlavə et
+                    </button>
                 </div>
 
                 {wishlist.length === 0 ? (
-                    <p>Wishlist is empty</p>
+                    <p>Wishlist boşdur</p>
                 ) : (
                     wishlist.map(product => (
                         <div key={product.id} className="favorite-product">
@@ -59,7 +91,9 @@ const Wishlist = () => {
                                         <p className='old-price'>3049.99AZN</p>
                                         <p className='new-price'>{product.price} AZN</p>
                                     </div>
-                                    <button><MdOutlineShoppingCart style={{ fontSize: "25px" }} /> Səbətə əlavə et</button>
+                                    <button onClick={() => addToCart(product)}>
+                                        <MdOutlineShoppingCart style={{ fontSize: "25px" }} /> Səbətə əlavə et
+                                    </button>
                                 </div>
                             </div>
                         </div>

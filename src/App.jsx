@@ -3,6 +3,7 @@ import './App.css'
 import HomePage from './assets/Components/HomePage/HomePage'
 import Wishlist from './assets/Components/WishList/Wishlist'
 import ShexsiKabinet from './assets/Components/ShexsiKabinet/ShexsiKabinet'
+import Basket from './assets/Components/Basket/Basket'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <Routes>
      <Route exact path='/' element={<HomePage/>} />
      <Route exact path='/wishList' element={<Wishlist/>} />
+     <Route exact path='/basket' element={<Basket/>}/>
      <Route exact path='/girish' element={<ShexsiKabinet/>}/>
     </Routes>
    </BrowserRouter>

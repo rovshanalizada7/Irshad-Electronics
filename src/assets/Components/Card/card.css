@@ -188,3 +188,25 @@
     color: rgb(37, 185, 37);
     border: 2px solid rgb(37, 185, 37);
 }
+
+.card .cart-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card .cart-button.in-cart {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
+}
+
+.card .cart-button:hover {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
+}

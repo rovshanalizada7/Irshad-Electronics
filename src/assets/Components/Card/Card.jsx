@@ -4,16 +4,23 @@ import { LiaBalanceScaleSolid } from "react-icons/lia";
 import { TbSmartHome } from "react-icons/tb";
 import { VscComment } from "react-icons/vsc";
 import { BsCart2 } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 import './card.css';
 
 const Card = ({ product }) => {
+    const navigate = useNavigate();
     const [isInWishlist, setIsInWishlist] = useState(false);
+    const [isInCart, setIsInCart] = useState(false);
 
     useEffect(() => {
         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
         const isProductInWishlist = wishlist.some(item => item.id === product.id);
         setIsInWishlist(isProductInWishlist);
-    }, [product.id]);  
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const isProductInCart = cart.some(item => item.id === product.id);
+        setIsInCart(isProductInCart);
+    }, [product.id]);
 
     const handleAddToWishlist = () => {
         let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
@@ -22,11 +29,30 @@ const Card = ({ product }) => {
         if (!isProductInWishlist) {
             wishlist.push(product);
             localStorage.setItem('wishlist', JSON.stringify(wishlist));
-            setIsInWishlist(true);  
+            setIsInWishlist(true);
         } else {
             wishlist = wishlist.filter(item => item.id !== product.id);
             localStorage.setItem('wishlist', JSON.stringify(wishlist));
-            setIsInWishlist(false);  
+            setIsInWishlist(false);
+        }
+    };
+
+    const handleAddToCart = () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const productInCart = cart.find(item => item.id === product.id);
+
+        if (!productInCart) {
+            cart.push({ ...product, quantity: 1 });
+        } else {
+            productInCart.quantity += 1;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        setIsInCart(true);
+    };
+
+    const handleGoToCart = () => {
+        if (isInCart) {
+            navigate("/basket");
         }
     };
 
@@ -37,7 +63,7 @@ const Card = ({ product }) => {
                 <FaHeart
                     className={`heart-icon ${isInWishlist ? 'active' : ''}`}
                     onClick={handleAddToWishlist}
-                    style={{ color: isInWishlist ? 'red' : 'gray', cursor: 'pointer' }} 
+                    style={{ color: isInWishlist ? 'red' : 'gray', cursor: 'pointer' }}
                 />
             </div>
             <div className="image">
@@ -76,7 +102,13 @@ const Card = ({ product }) => {
                         <p><span>24</span><span>ay</span></p>
                     </div>
                 </div>
-                <button><BsCart2 /> Səbətə əlavə et</button>
+                <button
+                    className={`cart-button ${isInCart ? 'in-cart' : ''}`}
+                    onClick={isInCart ? handleGoToCart : handleAddToCart}
+                >
+                    <BsCart2 /> {isInCart ? 'Səbətə keç' : 'Səbətə əlavə et'}
+                </button>
+
             </div>
         </div>
     );
