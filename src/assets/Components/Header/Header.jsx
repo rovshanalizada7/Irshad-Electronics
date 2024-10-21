@@ -9,6 +9,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { LuShoppingCart } from "react-icons/lu";
 import "../Header/header.css"
 import { useNavigate } from 'react-router-dom';
+import Modal from '../Modal/Modal';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -75,6 +76,53 @@ const Header = () => {
         transition: 'color 0.2s',
     };
 
+    const [showModal, setShowModal] = useState(false);
+
+    const handleOpenModal = () => {
+      setShowModal(true);
+    };
+  
+    const handleCloseModal = () => {
+      setShowModal(false);
+    };
+
+
+
+    const placeholders = "Apple, Samsung, Televizor, Soyuducu, Notbuk, Printer";
+    const placeholderWords = placeholders.split(", ");
+    const [currentText, setCurrentText] = useState('');
+    const [placeholderIndex, setPlaceholderIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [letterIndex, setLetterIndex] = useState(0);
+  
+    useEffect(() => {
+      const currentWord = placeholderWords[placeholderIndex];
+  
+     
+      const handleTyping = () => {
+        if (isDeleting) {
+          if (letterIndex > 0) {
+            setCurrentText(currentWord.substring(0, letterIndex - 1));
+            setLetterIndex(letterIndex - 1);
+          } else {
+            setIsDeleting(false);
+            setPlaceholderIndex((prevIndex) => (prevIndex + 1) % placeholderWords.length);
+          }
+        } else {
+          if (letterIndex < currentWord.length) {
+            setCurrentText(currentWord.substring(0, letterIndex + 1));
+            setLetterIndex(letterIndex + 1);
+          } else {
+            setTimeout(() => setIsDeleting(true), 1000); 
+          }
+        }
+      };
+  
+      const timeout = setTimeout(handleTyping, isDeleting ? 100 : 200);
+  
+      return () => clearTimeout(timeout); 
+    }, [currentText, isDeleting, letterIndex, placeholderIndex, placeholderWords]);
+
 
     return (
 
@@ -139,7 +187,7 @@ const Header = () => {
 
                         <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
                             <LuUser style={{ fontSize: "19px", margin: "0 8px", fontFamily: "Inter, sans-serif" }} />
-                            <span onClick={() => navigate("/girish")} style={{ fontSize: "13px", fontFamily: "Inter, sans-serif" }} class="cabinet-name">Şəxsi kabinet</span>
+                            <span onClick={() => navigate("/girish")} style={{ fontSize: "13px", fontFamily: "Inter, sans-serif" }} className="cabinet-name">Şəxsi kabinet</span>
                         </div>
                     </div>
 
@@ -319,7 +367,6 @@ const Header = () => {
                         display: "none",
                         flexDirection: "column",
                         position: "absolute",
-                        // left: "",
                         left: "29.1%",
                         top: "23%",
                         alignItems: "flex-start",
@@ -327,8 +374,6 @@ const Header = () => {
                         height: "493px",
                         width: "1000px",
                         backgroundColor: "#f7f7f7",
-                        // borderRadius: "5px",
-                        // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
                         overflowY: "auto",
                         maxHeight: "493px",
                         scrollbarWidth: "thin",
@@ -392,7 +437,7 @@ const Header = () => {
 
 
                     <div style={{ position: "relative", marginRight: "2rem" }}>
-                        <input className='search-inp' type="text" placeholder='Search' />
+                        <input data-placeholders={placeholders} autocomplete="off" className='search-inp' type="text" placeholder={currentText} />
                         <IoMdSearch className='search-icon1' style={{ position: "absolute", right: "1rem", top: "1rem", fontSize: "23px", color: "#95979c" }} />
                     </div>
                     <div style={{ width: "409px", height: "76px", display: "flex", alignItems: "center", justifyContent: "space-between" }} className="header-tools">
@@ -453,10 +498,11 @@ const Header = () => {
                         </div>
 
 
-                        <div className='payment-term' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+                        <div onClick={handleOpenModal}  className='payment-term' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
                             <FaCreditCard className='credit-card' style={{ fontSize: "16px" }} />
-                            <span style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Aylıq ödəniş</span>
+                            <span  style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Aylıq ödəniş</span>
                         </div>
+                        <Modal show={showModal} onClose={handleCloseModal} />
 
                     </div>
 

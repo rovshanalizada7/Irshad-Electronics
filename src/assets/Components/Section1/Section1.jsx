@@ -7,11 +7,7 @@ import "../Carousel/carousel.css"
 import ProductCarousel from '../ProductCarousel/ProductCarousel'
 
 const Section1 = () => {
-  // const [index, setIndex] = useState(0);
-
-  // const handleSelect = (selectedIndex) => {
-  //   setIndex(selectedIndex);
-  // };
+ 
 
   return (
     <section className='section1'>
@@ -24,10 +20,10 @@ const Section1 = () => {
 
         <div className="section1-discount">
         <Carousel>
-      <Carousel.Item interval={1500}>
+      <Carousel.Item interval={4000}>
         <ProductCarousel/>
       </Carousel.Item>
-      <Carousel.Item interval={1500}>
+      <Carousel.Item interval={4000}>
       <ProductCarousel/>
       </Carousel.Item>
      </Carousel>
