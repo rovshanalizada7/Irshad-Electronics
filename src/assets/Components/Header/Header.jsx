@@ -114,7 +114,7 @@ const Header = () => {
                         </div>
                         <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
                             <LuUser style={{ fontSize: "19px", margin: "0 8px", fontFamily: "Inter, sans-serif" }} />
-                            <span style={{ fontSize: "13px", fontFamily: "Inter, sans-serif" }} class="cabinet-name">Şəxsi kabinet</span>
+                            <span onClick={() => navigate("/girish")} style={{ fontSize: "13px", fontFamily: "Inter, sans-serif" }} class="cabinet-name">Şəxsi kabinet</span>
                         </div>
                     </div>
 

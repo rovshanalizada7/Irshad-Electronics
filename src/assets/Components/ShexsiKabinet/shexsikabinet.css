@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.shexsikabinet {
+    width: 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 33rem;
+}
+
+.shexsikabinet-header {
+    width: 92%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+}
+
+.shexsikabinet-logo img {
+    width: 110px;
+    height: 59px;
+}
+.shexsikabinet-logo {
+    cursor: pointer;
+}
+
+.shexsikabinet-headerRight .header-right-img img {
+    width: 90px;
+    height: 18px;
+    padding-right: 30px;
+}
+
+.shexsikabinet-headerRight .header-right-img {
+    border-right: 1px solid #e1e2e7;
+}
+
+.shexsikabinet-headerRight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.language-button {
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+}
+
+.language-option {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-option:hover {
+    background-color: #f0f0f0;
+}
+
+
+.language-option img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.shexsi-kabinet-login{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.shexsiKabinet-login{
+    display: flex;
+    width: 0%;
+    justify-content: space-between;
+}
+
+.shexsikabinet-login-img {
+    background-image: url('https://irshad.az/cdn-cgi/image/width=672/storage/pages/200/kabinet-cover.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 531px;
+    min-height: 100vh;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    display: flex;
+    justify-content: start;
+}
+
+.shexsi-kabinet-login a {
+    font-family: "Inter", sans-serif;
+    color: #232d40;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.form-group .form label {
+    color: #95979c;
+    font-size: 13px;
+    margin-bottom: .8rem;
+    font-family: "Inter", sans-serif;
+}
+
+.form-group .form{
+   display: flex;
+   flex-direction: column;
+}
+.form-group .form input {
+    border-color: #dadbdd;
+    background: #fff;
+    font-weight: 500;
+    color: #232d40;
+    border-radius: .6rem;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+    padding: 1.4rem 2rem;
+}
+
+.form-group input::placeholder {
+    color: #C6C0C5;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group button {
+    color: #fff;
+    background: #40b659;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 1.1rem 2rem;
+    align-items: center;
+    box-sizing: border-box;
+    border: none;
+    transition: 0.3s;
+    width: 425px;
+}
+
+.form-group button:hover {
+    color: #40b659;
+    background-color: #fff;
+    border: 1px solid #40b659;
+}
