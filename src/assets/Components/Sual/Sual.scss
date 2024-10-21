@@ -1,0 +1,125 @@
+.custom-accordion {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid #e3e5eb;
+    box-shadow: none !important;
+  
+    &.Mui-expanded {
+      border: 1px solid orange; 
+    }
+    
+  
+  
+  }
+  .accordion-container {
+    .custom-accordion {
+      border-radius: 8px; 
+  
+      overflow: hidden; 
+  
+     
+      .MuiAccordionSummary-root {
+        border-radius: 8px 8px 0 0;
+  
+   
+    }
+  }}
+  
+  .accordion-container {
+    .custom-accordion {
+    
+  
+      .MuiAccordionDetails-root {
+        color: #5b5f66; 
+        font-family: Inter, sans-serif
+      }
+    }
+  }
+  
+  .sc-btn1,
+.sc-btn2,
+.sc-btn3,
+.sc-btn4 {
+  box-shadow: none !important; 
+  border:none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 17px;
+}
+
+  .accordion-container {
+    width: 60%;        
+    margin: 0 auto;   
+  }
+  .sual-cavab{
+    font-size: 30px;
+    width: 23%;
+    text-align: center;
+    font-weight: 600;
+    color: #232d40;
+  }
+  .Sual-button{
+    width: 60%;          
+    margin: 0 auto;     
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    border: none;
+    box-shadow: transparent;
+    .sc-btn1{
+        background-color: #F6861F;
+        color: white;
+        padding: 17px;
+      }
+      .sc-btn2,.sc-btn3,.sc-btn4{
+        background-color: white;
+        color:#5b5f66;
+        &:hover{
+            background-color: #F6861F;
+            color: white;
+           
+        }
+      }
+        
+  }
+
+  
+  .custom-accordion {
+    .MuiAccordionSummary-root {
+      color: #232d40; 
+      font-weight: 600; 
+      font-family: Inter, sans-serif
+      
+    }
+  
+   
+    }
+.Sual-button2{
+    display: flex;           
+  justify-content: center;
+  margin-top: 20px; 
+  margin-bottom: 30px;      
+    .sc-btn5{
+        color: #5b5f66;
+        border: 2px solid #5b5f66;
+        border-radius: 8px;
+        padding: 15px 33px;
+        background-color: #fff;
+     font-size: 18px;
+        font-family: "Inter", sans-serif
+        
+       
+        
+    }
+    .sc-btn5:hover{
+        color: white;
+        background-color: #5b5f66;
+        transition: 1s;
+    }
+}
+
+  

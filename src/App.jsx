@@ -5,6 +5,8 @@ import Wishlist from './assets/Components/WishList/Wishlist'
 import ShexsiKabinet from './assets/Components/ShexsiKabinet/ShexsiKabinet'
 import Basket from './assets/Components/Basket/Basket'
 import Kampaniyalar from './assets/Components/Kampaniyalar/Kampaniyalar'
+import Sual from './assets/Components/Sual/Sual'
+import Sikayet from './assets/Components/Sikayet/Sikayet'
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
      <Route exact path='/basket' element={<Basket/>}/>
      <Route exact path='/girish' element={<ShexsiKabinet/>}/>
      <Route exact path='/kampaniyalar' element={<Kampaniyalar/>}/>
+     <Route exact path='/shikayet&ve&teklifler' element={<Sikayet/>}/>
+     <Route exact path='/sual&cavab' element={<Sual/>}/>
     </Routes>
    </BrowserRouter>
     </>
