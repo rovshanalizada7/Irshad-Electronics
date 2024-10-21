@@ -12,11 +12,20 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const navigate = useNavigate();
-    const [wishlistCount, setWishlistCount] = useState(0); 
+    const [wishlistCount, setWishlistCount] = useState(0);
     const [isModalOpen, setModalOpen] = useState(false);
+    const [isHovering, setIsHovering] = useState(false);
 
     const toggleModal = () => {
         setModalOpen(!isModalOpen);
+    };
+
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovering(false);
     };
 
     useEffect(() => {
@@ -25,41 +34,41 @@ const Header = () => {
     }, []);
     const containerStyle = {
         display: 'flex',
-        justifyContent: 'space-around',
-        padding: '20px',
+        flexWrap: 'wrap',
+        padding: '0px',
         fontFamily: 'Arial, sans-serif',
+
     };
 
     const columnStyle = {
-        flex: 1,
-        margin: '0 15px',
-        padding: '10px',
-        borderRadius: '8px',
+        flexBasis: '20%',
+        margin: '20px',
+        padding: '20px',
+
     };
 
     const headerStyle = {
-        fontSize: '14px',
-        marginBottom: '10px',
+        fontSize: '13px',
+        marginBottom: '8px',
         fontWeight: 'bold',
-        paddingBottom: '5px',
-        width: '30%',
         color: '#333',
-        paddingBottom: '5px',
-
+        textTransform: 'uppercase',
     };
 
     const listStyle = {
         listStyleType: 'none',
-        padding: 0,
-        fontSize: "13px"
+        padding: '0',
+        fontSize: '13px',
+        color: '#666',
     };
 
     const listItemStyle = {
         marginBottom: '5px',
         color: '#555',
+        cursor: 'pointer',
+        transition: 'color 0.2s',
     };
 
-    
 
     return (
 
@@ -129,111 +138,181 @@ const Header = () => {
                     </div>
 
                     <div>
+            <div
+                id='kataloqClick'
+                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '1rem' }}
+                onClick={toggleModal}
+            >
+                <a className='kataloq' href="#"><IoMdMenu style={{ fontSize: '22px' }} /> Kataloq</a>
+            </div>
 
-                        <div
-                            id='kataloqClick'
-                            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '1rem' }}
-                            onClick={toggleModal}
+            {isModalOpen && (
+                <div className="katalog-modal">
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            position: "absolute",
+                            left: "6.5%",
+                            top: "23%",
+                            alignItems: "flex-start",
+                            zIndex: "10",
+                            height: "auto",
+                            width: "345px",
+                            backgroundColor: "#f7f7f7",
+                            borderRadius: "5px",
+                            overflowY: "auto",
+                            maxHeight: "493px",
+                            scrollbarWidth: "thin",
+                            padding: "10px"
+                        }}
+                    >
+                        <ul
+                            style={{
+                                fontFamily: "Inter, sans-serif",
+                                margin: "0",
+                                padding: "0",
+                                listStyleType: "none",
+                                fontSize: "16px",
+                                fontWeight: "bolder",
+                                width: "100%",
+                            }}
                         >
-                            <a className='kataloq' href="#"><IoMdMenu style={{ fontSize: '22px' }} /> Kataloq</a>
-                        </div>
-
-
-                        {isModalOpen && (
-                            <div className="katalog-modal">
-                                <div
+                            {[
+                                { name: "Yalnız online məhsullar", img: "https://irshad.az/images/svg-icons/online.svg" },
+                                { name: "Telefon və aksessuarlar", img: "https://irshad.az/storage/product-categories/1/1.svg" },
+                                { name: "Böyük məişət texnikası", img: "https://irshad.az/storage/product-categories/27/icons8-appliances-1-1.svg" },
+                                { name: "Kiçik məişət texnikası", img: "https://irshad.az/storage/product-categories/2287/icons8-microwave-1.svg" },
+                                { name: "TV və Audio", img: "https://irshad.az/storage/product-categories/36/3.svg" },
+                                { name: "Foto texnika", img: "https://irshad.az/storage/product-categories/2288/icons8-camera-1.svg" },
+                                { name: "Notbuk, planşet və kompüter texnikası", img: "https://irshad.az/storage/product-categories/38/4.svg" },
+                                { name: "Outlet", img: "https://irshad.az/storage/product-categories/2665/outlet-icon.svg" },
+                                { name: "Evə uyğun məhsullar", img: "https://irshad.az/storage/product-categories/519/5.svg" },
+                                { name: "Mebellər və tekstil", img: "https://irshad.az/storage/product-categories/2290/icons8-furniture-1.svg" },
+                                { name: "Nəqliyyat və Əyləncə", img: "https://irshad.az/storage/product-categories/520/6.svg" },
+                                { name: "Avtomobil üçün məhsullar", img: "https://irshad.az/storage/product-categories/2280/icons8-fiat-500-1.svg" },
+                                { name: "İdman və sağlamlıq", img: "https://irshad.az/storage/product-categories/532/8.svg" },
+                                { name: "İnşaat", img: "https://irshad.az/storage/product-categories/1103/inshaat.svg" },
+                                { name: "Dəftərxana Ləvazimatları", img: "https://irshad.az/storage/product-categories/2286/icons8-moleskine-1-1.svg" },
+                                { name: "Musiqi avadanlıqları", img: "https://irshad.az/storage/product-categories/2289/icons8-guitar-1.svg" },
+                                { name: "Şəxsi əşyalar", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" },
+                                { name: "Zinət əşyaları", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" }
+                            ].map((item, index) => (
+                                <li
+                                    key={index}
                                     style={{
+                                        position: "relative",
+                                        padding: "0.8rem 0.5rem",
+                                        cursor: "pointer",
                                         display: "flex",
-                                        flexDirection: "column",
-                                        position: "absolute",
-                                        left: "6.5%",
-                                        top: "23%",
-                                        alignItems: "flex-start",
-                                        zIndex: "10",
-                                        height: "auto",
-                                        width: "345px",
-                                        backgroundColor: "#f7f7f7",
-                                        borderRadius: "5px",
-                                        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
-                                        overflowY: "auto",
-                                        maxHeight: "493px",
-                                        scrollbarWidth: "thin",
-                                        padding: "10px"
+                                        alignItems: "center",
+                                        width: "100%",
+                                        transition: "background-color 0.3s ease",
                                     }}
+                                    onMouseEnter={() => handleMouseEnter(item.name)}
+                                    onMouseLeave={handleMouseLeave}
                                 >
-                                    <ul
-                                        style={{
-                                            fontFamily: "Inter, sans-serif",
-                                            margin: "0",
-                                            padding: "0",
-                                            listStyleType: "none",
-                                            fontSize: "16px",
-                                            fontWeight: "bolder",
-                                            width: "100%",
-                                        }}
-                                    >
-                                        {[
-                                            { name: "Yalnız online məhsullar", img: "https://irshad.az/images/svg-icons/online.svg" },
-                                            { name: "Telefon və aksessuarlar", img: "https://irshad.az/storage/product-categories/1/1.svg" },
-                                            { name: "Böyük məişət texnikası", img: "https://irshad.az/storage/product-categories/27/icons8-appliances-1-1.svg" },
-                                            { name: "Kiçik məişət texnikası", img: "https://irshad.az/storage/product-categories/2287/icons8-microwave-1.svg" },
-                                            { name: "TV və Audio", img: "https://irshad.az/storage/product-categories/36/3.svg" },
-                                            { name: "Foto texnika", img: "https://irshad.az/storage/product-categories/2288/icons8-camera-1.svg" },
-                                            { name: "Notbuk, planşet və kompüter texnikası", img: "https://irshad.az/storage/product-categories/38/4.svg" },
-                                            { name: "Outlet", img: "https://irshad.az/storage/product-categories/2665/outlet-icon.svg" },
-                                            { name: "Evə uyğun məhsullar", img: "https://irshad.az/storage/product-categories/519/5.svg" },
-                                            { name: "Mebellər və tekstil", img: "https://irshad.az/storage/product-categories/2290/icons8-furniture-1.svg" },
-                                            { name: "Nəqliyyat və Əyləncə", img: "https://irshad.az/storage/product-categories/520/6.svg" },
-                                            { name: "Avtomobil üçün məhsullar", img: "https://irshad.az/storage/product-categories/2280/icons8-fiat-500-1.svg" },
-                                            { name: "İdman və sağlamlıq", img: "https://irshad.az/storage/product-categories/532/8.svg" },
-                                            { name: "İnşaat", img: "https://irshad.az/storage/product-categories/1103/inshaat.svg" },
-                                            { name: "Dəftərxana Ləvazimatları", img: "https://irshad.az/storage/product-categories/2286/icons8-moleskine-1-1.svg" },
-                                            { name: "Musiqi avadanlıqları", img: "https://irshad.az/storage/product-categories/2289/icons8-guitar-1.svg" },
-                                            { name: "Şəxsi əşyalar", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" },
-                                            { name: "Zinət əşyaları", img: "https://irshad.az/storage/product-categories/1507/shexsi-eshya.svg" }
-                                        ].map((item, index) => (
-                                            <li
-                                                key={index}
-                                                style={{
-                                                    position: "relative",
-                                                    padding: "0.8rem 0.5rem",
-                                                    cursor: "pointer",
-                                                    display: "flex",
-                                                    alignItems: "center",
-                                                    width: "100%",
-                                                    transition: "background-color 0.3s ease",
-                                                }}
-                                                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f0f0f0")}
-                                                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
-                                            >
-                                                <img
-                                                    src={item.img}
-                                                    alt={item.name}
-                                                    style={{ width: "24px", height: "24px", marginRight: "10px" }}
-                                                />
-                                                {item.name}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        )}
+                                    <img
+                                        src={item.img}
+                                        alt={item.name}
+                                        style={{ width: "24px", height: "24px", marginRight: "10px" }}
+                                    />
+                                    {item.name}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
+                </div>
+            )}
 
-                    <div className="hover-catalog" style={{
-                        display: "none",
+            {isHovering && (
+                <div
+                    className="hover-catalog"
+                    style={{
+                        display: "flex",
                         flexDirection: "column",
                         position: "absolute",
-                        // left: "",
-                        left: "29.2%",
-                        top: "23.5%",
+                        left: "29.1%",
+                        top: "23%",
                         alignItems: "flex-start",
                         zIndex: "10",
                         height: "493px",
                         width: "1000px",
                         backgroundColor: "#f7f7f7",
-                        borderRadius: "5px",
-                        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+                        overflowY: "auto",
+                        maxHeight: "493px",
+                        scrollbarWidth: "thin",
+                        padding: "10px"
+                    }}
+                >
+                    <div style={containerStyle}>
+                        <div style={columnStyle}>
+                            <h3 style={headerStyle}>Mobil telefonlar</h3>
+                            <ul style={listStyle}>
+                                {['Apple', 'HONOR', 'Samsung', 'Xiaomi', 'Poco', 'Nokia', 'Oppo', 'Itel', 'F+', 'TCL', 'Infinix', 'Motorola', 'Blackview', 'Energizer'].map((item, index) => (
+                                    <li key={index} style={listItemStyle}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div style={columnStyle}>
+                            <h3 style={headerStyle}>Telefon aksesuarları</h3>
+                            <ul style={listStyle}>
+                                {['Adapter USB', 'Adapter simsiz', 'Telefon qabları', 'Ekran Qoruyucu', 'Yaddaş kartı', 'Power Bank', 'USB', 'Açarlıq', 'Stilus', 'Monopod', 'Nömrə ötürücü', 'Qulaqlıq qabları', 'Ştativli Led işıq', 'Mikrofon'].map((item, index) => (
+                                    <li key={index} style={listItemStyle}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div style={columnStyle}>
+                            <h3 style={headerStyle}>Qulaqlıqlar</h3>
+                            <ul style={listStyle}>
+                                {['Apple', 'Samsung', 'Xiaomi', 'HONOR', 'A4tech', 'Baseus', 'Beats', 'Celebrat', 'JBL', 'Marshall', 'Porodo', 'QCY', 'Remax', 'Skullcandy', 'TCL'].map((item, index) => (
+                                    <li key={index} style={listItemStyle}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div style={columnStyle}>
+                            <h3 style={headerStyle}>Smart saatlar</h3>
+                            <ul style={listStyle}>
+                                {['Apple', 'Samsung', 'HONOR', 'Xiaomi', 'Haylou', 'Mibro', 'Wonlex'].map((item, index) => (
+                                    <li key={index} style={listItemStyle}>{item}</li>
+                                ))}
+                            </ul>
+
+                            <h3 style={headerStyle}>Qolbaqlar</h3>
+                            <ul style={listStyle}>
+                                {['Samsung', 'Xiaomi', 'HONOR'].map((item, index) => (
+                                    <li key={index} style={listItemStyle}>{item}</li>
+                                ))}
+                            </ul>
+
+                            <h3 style={headerStyle}>Stasionar telefonlar</h3>
+                            <ul style={listStyle}>
+                                <li style={listItemStyle}>Panasonic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+
+        
+                    <div className="hover-catalog" style={{
+                        display: "none",
+                        flexDirection: "column",
+                        position: "absolute",
+                        // left: "",
+                        left: "29.1%",
+                        top: "23%",
+                        alignItems: "flex-start",
+                        zIndex: "10",
+                        height: "493px",
+                        width: "1000px",
+                        backgroundColor: "#f7f7f7",
+                        // borderRadius: "5px",
+                        // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
                         overflowY: "auto",
                         maxHeight: "493px",
                         scrollbarWidth: "thin",
@@ -262,26 +341,14 @@ const Header = () => {
                             <div style={columnStyle}>
                                 <h3 style={headerStyle}>Qulaqlıqlar</h3>
                                 <ul style={listStyle}>
-                                    {['Apple', 'Samsung', 'Xiaomi', 'HONOR', 'A4tech', 'Baseus', 'Beats', 'Celebrat', 'JBL', 'Marshall', 'Porodo', 'QCY', 'Remax', 'Skullcandy', 'TCL', 'The House of Marley', 'Aiwa', 'Lenovo', 'Borofone', 'Razer', 'Monster', 'Redmi', 'Edifier'].map((item, index) => (
+                                    {['Apple', 'Samsung', 'Xiaomi', 'HONOR', 'A4tech', 'Baseus', 'Beats', 'Celebrat', 'JBL', 'Marshall', 'Porodo', 'QCY', 'Remax', 'Skullcandy', 'TCL'].map((item, index) => (
                                         <li key={index} style={listItemStyle}>{item}</li>
                                     ))}
                                 </ul>
+
                             </div>
 
-                            <div style={columnStyle}>
-                                <h3 style={headerStyle}>Elektron kitab</h3>
-                                <ul style={listStyle}>
-                                    <li style={listItemStyle}>PocketBook</li>
-                                </ul>
-                                <h3 style={headerStyle}>Elektron kitab üçün qab</h3>
-                                <ul style={listStyle}>
-                                    <li style={listItemStyle}>PocketBook</li>
-                                </ul>
-                                <h3 style={headerStyle}>Uşaq saatları</h3>
-                                <ul style={listStyle}>
-                                    <li style={listItemStyle}>Wonlex</li>
-                                </ul>
-                            </div>
+
 
                             <div style={columnStyle}>
                                 <h3 style={headerStyle}>Smart saatlar</h3>
@@ -302,14 +369,7 @@ const Header = () => {
                                 </ul>
                             </div>
 
-                            <div style={columnStyle}>
-                                <h3 style={headerStyle}>Saatlar</h3>
-                                <ul style={listStyle}>
-                                    {['Casio', 'Orient', 'Cover', 'Q&Q', 'Ingersoll', 'VMF', 'Frederique Constant', 'Sharg Gold', 'Amalys', 'Jacques Lemans'].map((item, index) => (
-                                        <li key={index} style={listItemStyle}>{item}</li>
-                                    ))}
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
 
