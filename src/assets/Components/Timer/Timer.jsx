@@ -32,7 +32,7 @@ const CountdownTimer = () => {
            
             {timeLeft > 0 ? (
                 <div>
-                    <p>{days}d {hours}h {minutes}m {seconds}s</p>
+                    <p style={{margin:0 , fontWeight:600}}>{days} gün {hours} : {minutes} : {seconds}</p>
                 </div>
             ) : (
                 <p>Time's up!</p>

@@ -134,7 +134,7 @@ const Header = () => {
                     <nav className='main-nav'>
                         <ul>
                             <li>
-                                <a className='first3-lists' href=""> Kampaniyalar </a>
+                                <a onClick={() => navigate("/kampaniyalar")} className='first3-lists' href=""> Kampaniyalar </a>
                             </li>
                             <li>
                                 <a className='first3-lists' href=""> Mağazalar </a>

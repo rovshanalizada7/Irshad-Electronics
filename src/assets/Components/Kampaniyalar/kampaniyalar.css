@@ -1,0 +1,176 @@
+.kampaniyalar ul {
+    height: 21px;
+    width: 87%;
+    display: flex;
+    padding-left: 0;
+    font-family: sans-serif;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.kampaniyalar {
+    width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.kampaniyalar-main {
+    width: 87%;
+    margin-bottom: 30px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* 426 415 */
+
+.kampaniyalar-review .kampaniya {
+    width: 426px;
+    height: 445px;
+    
+    display: flex;
+    flex-direction: column;
+   
+    border: 1px solid #e3e5eb;
+    border-radius: 1.2rem;
+}
+
+/* 424 204 */
+.kampaniya img {
+    width: 426px;
+    height: 204px;
+    object-fit: cover;
+    border-top-right-radius: 1.2rem;
+    border-top-left-radius: 1.2rem;
+
+}
+
+.kampaniyalar-title{
+    margin-bottom: 15px;
+
+}
+
+.kampaniya-info .time-line {
+    color: #5b5f66;
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    width: 82%;
+    margin: 0 !important;
+}
+
+.kampaniyalar-review{
+    margin-top: 30px;
+}
+.kampaniya-info a {
+    color: #232d40;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    width: 83%;
+    display: flex;
+}
+
+.kampaniya-footer .kampaniya-about {
+    font-size: 14px;
+    color: #5b5f66;
+    padding: 1rem 1.6rem;
+    border: 1px solid #dee2e6;
+    border-radius: .6rem;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.kampaniya-footer .kampaniya-about:hover {
+    color: #fff;
+    background-color: #5b5f66;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.icon-arrow {
+    margin-left: 20px;
+}
+
+.kampaniya-time {
+    color: #f6861f;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 16px;
+    border-radius: .8rem;
+    font-family: "Inter", sans-serif;
+    position: relative;
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kampaniya-time::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: #fff;
+    border-radius: .8rem;
+    justify-content: center;
+    z-index: -1;
+}
+
+.kampaniya-time::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: .8rem;
+    background: linear-gradient(90deg, #f6861f 0, #f0d6bd 50%, #40b659 100%);
+    z-index: -2;
+    -webkit-animation: 3s infinite gradient;
+    animation: 3s infinite gradient;
+    background-size: 400% 400%;
+}
+
+.kampaniya-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+}
+
+.kampani-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 49%;
+    gap: 20px;
+}
+
+.kampaniya-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+}
+
+.kampaniyalar-review {
+    display: flex;
+    gap: 25px;
+}
