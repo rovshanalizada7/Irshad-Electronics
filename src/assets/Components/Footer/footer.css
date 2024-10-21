@@ -7,10 +7,11 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 footer .foot-container{
-    width: 87%;
+    width:90%;
     display: flex;
     justify-content: space-between;
     margin: 30px 0px;
@@ -180,3 +181,72 @@ footer .foot-bottom p a{
 footer .foot-bottom p a:hover{
    text-decoration: underline !important;
 }
+
+footer::after, footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 8px;
+    opacity: 0.9;
+  }
+  
+  footer::after {
+    left: 0;
+    width: 0%;
+    background-color: #40B659;
+  }
+  
+  footer::before {
+    right: 0;
+    width: 100%;
+    background-color: #F6861F;
+  }
+  
+  footer .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: -7px;
+  }
+  
+  .animate::after {
+    animation: slideIn 1.5s ease-in-out forwards;
+  }
+  
+  .animate::before {
+    animation: slideOut 1.5s ease-in-out forwards;
+  }
+  
+  .animate .circle {
+    animation: circle 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 25%;
+    }
+  }
+  
+  @keyframes slideOut {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  
+  @keyframes circle {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 25%;
+    }
+  }

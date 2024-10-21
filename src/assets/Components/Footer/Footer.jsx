@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaHouse } from "react-icons/fa6";
 import { CiFacebook } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
@@ -15,8 +15,38 @@ import app from './apps/image-app.png';
 import './footer.css'
 
 const Footer = () => {
+
+  const footerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      {
+        threshold: 0.05, 
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <footer>
+    <footer ref={footerRef} className={isVisible ? 'animate' : ''}>
+      <div className="circle"></div>
       <div className="foot-container">
         <div className="foot-qr">
           <img src="https://irshad.az/images/mobile-qr.png" alt="" />
