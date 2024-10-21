@@ -122,11 +122,21 @@ const Header = () => {
                         <a href="">
                             <img style={{ width: "60px", height: "18px" }} src="https://irshad.az/images/svg-icons/ulduz171-black.svg" alt="" />
                         </a>
-                        <div style={{ display: "flex", alignItems: "center" }}>
+
+                        <div id='change-lang' className='l' style={{ display: "flex", alignItems: "center" }}>
                             <img style={{ width: "24px", height: "16px" }} src="https://irshad.az/images/svg-icons/flag-az.svg" alt="" />
-                            <span style={{ fontSize: "13px", margin: "0 8px", fontFamily: "Inter, sans-serif" }}>Azərbaycan dili</span>
+                            <span className='azerbaijan-lang' style={{ fontSize: "13px", margin: "0 8px", fontFamily: "Inter, sans-serif" }}>Azərbaycan dili</span>
                             <ExpandMoreIcon />
+
+                           
+                           <div className='russian-lang' >
+                            <img style={{ width: "24px", height: "22px" }} src="https://irshad.az/images/svg-icons/flag-ru.svg" alt="" />
+                            <span style={{ fontSize: "13px", margin: "0 8px", fontFamily: "Inter, sans-serif",padding:"5px 0" }}>Русский язык</span>
+                            </div>
+                           
+
                         </div>
+
                         <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
                             <LuUser style={{ fontSize: "19px", margin: "0 8px", fontFamily: "Inter, sans-serif" }} />
                             <span onClick={() => navigate("/girish")} style={{ fontSize: "13px", fontFamily: "Inter, sans-serif" }} class="cabinet-name">Şəxsi kabinet</span>

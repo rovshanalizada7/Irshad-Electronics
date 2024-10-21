@@ -76,7 +76,10 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: rgb(71, 89, 89); */
+}
+.header-top-list a {
+  display: flex;
+  align-items: center;
 }
 .header-top-list a::after{
   content: '';
@@ -86,6 +89,47 @@ header{
   display: inline-block;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+header .l::after{
+  content: '';
+  background: #e1e2e7;
+  height:1.3rem;
+  width: 1px;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+header .l{
+  position: relative;
+  cursor: pointer;
+  
+}
+
+#change-lang:hover .russian-lang{
+  display: flex;
+  transition: .3s;
+}
+#change-lang:hover .back-lang{
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  z-index: -1;
+}
+
+.russian-lang{
+  display:none;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+  width: 94%;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -45px;
+  padding: 3px 10px;
+  left: -7px;
+  background-color: #fff;
+  z-index: 99;
+  border: 1px solid #e1e2e7;
 }
 
 .header-bottom{
