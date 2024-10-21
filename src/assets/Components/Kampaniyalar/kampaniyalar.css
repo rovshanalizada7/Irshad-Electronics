@@ -139,13 +139,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: .8rem;
-    background: linear-gradient(90deg, #f6861f 0, #f0d6bd 50%, #40b659 100%);
+    border-radius: 0.8rem;
+    background: linear-gradient(90deg, #f6861f 0%, #f0d6bd 50%, #40b659 100%);
     z-index: -2;
-    -webkit-animation: 3s infinite gradient;
-    animation: 3s infinite gradient;
+    animation: gradient 3s infinite;
     background-size: 400% 400%;
-}
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 .kampaniya-footer {
     display: flex;
