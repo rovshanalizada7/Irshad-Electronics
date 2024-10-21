@@ -150,6 +150,7 @@
     border: 1px solid #e6e6e6;
     font-size: 14px;
     padding: 1.4rem 2rem;
+    outline: none;
 }
 
 .form-group input::placeholder {
