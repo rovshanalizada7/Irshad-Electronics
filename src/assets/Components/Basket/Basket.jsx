@@ -48,7 +48,7 @@ const Basket = () => {
                                 <div key={item.id} className="cart-item">
                                     <img src={item.image} alt={item.title} className="cart-item-image" />
                                     <div className="cart-item-info">
-                                        <h4>{item.title}</h4>
+                                        <h4>{item.name}</h4>
                                         <p>{item.price} AZN</p>
                                         <div className="cart-item-controls">
                                             <div className="quantity-controls">

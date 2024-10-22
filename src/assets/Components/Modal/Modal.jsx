@@ -10,7 +10,7 @@ const Modal = ({ show, onClose }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <button className="close-button" onClick={onClose}>×</button>
-        <h3>Aylıq ödəniş</h3>
+        <h3 className='h3'>Aylıq ödəniş</h3>
         <div className="payment-options">
           <img style={{width:"174px",height:"49px"}} src="https://irshad.az/images/million.jpeg" alt="Million" />
           <img style={{width:"174px",height:"46px"}} src="https://irshad.az/images/epul.jpeg" alt="Epul" />

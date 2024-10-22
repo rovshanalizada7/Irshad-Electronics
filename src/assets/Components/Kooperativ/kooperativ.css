@@ -135,7 +135,7 @@ input, select, textarea {
     font-size: 12px;
 }
 
-button {
+.buttonnn {
     width: 100%;
     padding: 10px;
     background-color: #28a745;
@@ -146,7 +146,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buttonnn:hover {
     background-color: white;
     color:#28a745;
     border: 1px solid #28a745;

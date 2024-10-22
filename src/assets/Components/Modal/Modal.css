@@ -23,18 +23,18 @@
     background: #fff !important;
     border-radius: 12px !important;
 }
-.modal-content h3{
+.modal-content .h3{
  text-align: left;
  margin: 20px;
  font-weight: 600;
 }
   
-  .close-button {
+.close-button {
     position: absolute;
     top: 10px;
     right: 10px;
     border: none;
-    background: transparent;
+    background: transparent !important;
     font-size: 24px;
     cursor: pointer;
     font-size: 36px;
@@ -43,6 +43,8 @@
     border-radius: 50%;
     margin: 20px;
   }
+  
+
   
   .payment-options img {
     margin: 10px;

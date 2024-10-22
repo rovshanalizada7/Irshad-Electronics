@@ -87,7 +87,7 @@ const Kooperativ = () => {
                         <label for="message">İsmarıc</label>
                         <textarea id="message" placeholder="İsmarıc" rows="5"></textarea>
                     </div>
-                    <div className="button">
+                    <div className="buttonnn">
                     <button type="submit" className='submit'>Təsdiq et</button>
                     </div>
                 </form>
