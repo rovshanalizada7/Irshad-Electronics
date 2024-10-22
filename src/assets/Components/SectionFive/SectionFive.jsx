@@ -11,7 +11,7 @@ const SectionFive = () => {
                     <button>Daha ətraflı</button>
                 </div>
                 <div className="SectionFive-qr">
-                    <div className="img"> <img src="https://irshad.az/cdn-cgi/image/width=144/storage/pages/1116/324r.png" alt="" /></div>
+                    <div className="img-qr"> <img src="https://irshad.az/cdn-cgi/image/width=144/storage/pages/1116/324r.png" alt="" /></div>
                     <p>Yükləmək üçün skan et</p>
                 </div>
                 <div className="irshad-line">
