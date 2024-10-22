@@ -1,0 +1,147 @@
+@media (max-width: 1300px) {
+    header{
+      
+    }
+    .header-top-list{
+      width: 55%;
+    }
+    header ul li a{
+      font-size:10px !important ;
+      width: 65px !important;
+      height: 9px !important;
+     
+    }
+    header .section-services{
+      flex-wrap: wrap !important;
+      height: auto !important;
+    }
+    .carousel-control-next{
+        display: none;
+    }
+    .section1-carousel{
+        width: 100% !important;
+    }
+    .section-services{
+        flex-wrap: wrap;
+        gap: 10px;
+        height: auto !important;
+        justify-content: center !important;
+    }
+    .section-row{
+        height: auto !important;
+    }
+    .search-inp{
+        display: none;
+    }
+    .last-lists{
+        display: none;
+    }
+    .header-top-list{
+        width: 85% !important;
+    }
+    .header-top-list a{
+        width: 63px !important;
+    }
+  
+    .search-icon1{
+        display: none;
+    }
+    .SectionFour-products .product-review{
+      flex-wrap: wrap;
+      justify-content: center !important;
+    }
+    .SectionFour-products .youtube-review{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .SectionFive-container{
+      width: 100% !important;
+    }
+    footer .foot-container{
+        width: 100%;
+        flex-wrap: wrap;
+        
+    }
+    footer{
+        height: auto !important;
+    }
+    .SectionFive-container{
+        height: auto !important;
+    }
+    .section1-content{
+        flex-wrap: wrap ;
+        justify-content: center !important;
+        gap: 20px !important;
+       height: auto !important;
+    }
+    .section1{
+        height: auto !important;
+    }
+    .SectionFive{
+        height: auto !important;
+    }
+    .SectionFive-qr{
+        margin-bottom: 2rem;
+    }
+    .SectionFive-text{
+        justify-content: center;
+    }
+    .SectionFive-text{
+        margin-top: 1rem;
+    }
+    .swiper-slide{
+        width: 50% !important;
+    }
+ 
+    
+  }
+  @media (max-width: 750px){
+    .payment-term{
+        padding: .5rem !important;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .header-top-content{
+        flex-wrap: wrap !important;
+    }
+    .products-swip .button-container{
+        top: 41px !important;
+    }
+    footer .foot-bottom{
+        flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 600px){
+    .swiper-slide .card{
+        width: 100%;
+    }
+    .products-swip .button-container{
+        top: 91px !important;
+    }
+    .compare-like{
+        font-size: 10px !important;
+    }
+    .monthly-payment{
+        font-size: 10px !important;
+    }
+    .card img{
+        width: 100%;
+    }
+    .SectionFive-qr{
+        margin-top: 1.5rem !important;
+    }
+    .SectionFive-text{
+        padding: 1rem;
+    }
+    .logo img {
+        width: 82px !important;
+    }
+    #kataloqClick{
+        margin: 0 !important;
+    }
+    #kataloqClick a{
+        padding: 0.5rem  !important;
+    }
+  }

@@ -444,7 +444,7 @@ const Header = () => {
 
                         <div className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
                             <HiOutlineScale className='tools-icon' style={{ fontSize: "24px" }} />
-                            <span style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Müqayisə</span>
+                            <span className='compare-like' style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Müqayisə</span>
                         </div>
 
                         <div onClick={() => navigate("/wishList")} className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px", position: "relative" }}>
@@ -453,7 +453,7 @@ const Header = () => {
                             ) : (
                                 <FaRegHeart className='tools-icon' style={{ fontSize: "24px" }} />
                             )}
-                            <span style={{ fontFamily: "Inter, sans-serif", fontSize: "14px" }}>Bəyəndim</span>
+                            <span className='compare-like' style={{ fontFamily: "Inter, sans-serif", fontSize: "14px" }}>Bəyəndim</span>
                             {wishlistCount > 0 && (
                                 <span className="wishlist-count" style={{
                                     position: "absolute",
@@ -476,7 +476,7 @@ const Header = () => {
 
                         <div onClick={() => navigate("/basket")} className='tools' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px", position: "relative" }}>
                             <LuShoppingCart className='tools-icon' style={{ fontSize: "24px" }} />
-                            <span style={{ fontFamily: "Inter, sans-serif", fontSize: "14px" }}>Səbət</span>
+                            <span className='compare-like' style={{ fontFamily: "Inter, sans-serif", fontSize: "14px" }}>Səbət</span>
                             {basketCount > 0 && (
                                 <span className="basket-count" style={{
                                     position: "absolute",
@@ -500,7 +500,7 @@ const Header = () => {
 
                         <div onClick={handleOpenModal}  className='payment-term' style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
                             <FaCreditCard className='credit-card' style={{ fontSize: "16px" }} />
-                            <span  style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Aylıq ödəniş</span>
+                            <span className='monthly-payment'  style={{ fontFamily: "font-family: Inter, sans-serif", fontSize: "14px" }}>Aylıq ödəniş</span>
                         </div>
                         <Modal show={showModal} onClose={handleCloseModal} />
 
