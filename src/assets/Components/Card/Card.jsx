@@ -12,6 +12,12 @@ const Card = ({ product }) => {
     const [isInWishlist, setIsInWishlist] = useState(false);
     const [isInCart, setIsInCart] = useState(false);
 
+    const handleClick = () => {
+        // Navigate to the product detail page with the product ID
+        navigate(`/product/${product.id}`);
+    };
+
+
     useEffect(() => {
         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
         const isProductInWishlist = wishlist.some(item => item.id === product.id);
@@ -72,8 +78,11 @@ const Card = ({ product }) => {
             <div className="product-content">
                 <span className="category">{product.category}</span>
                 <h2 className='product-name'>
-                    <a href="">{product.name}</a>
-                </h2>
+                {/* Wrap product name in a clickable span */}
+                <a onClick={handleClick} style={{ cursor: 'pointer' }}>
+                    {product.name}
+                </a>
+            </h2>
                 <div className="circle"></div>
                 <ul className="stars">
                     <li><img src="https://irshad.az/images/svg-icons/starOrange.svg" alt="" /></li>
