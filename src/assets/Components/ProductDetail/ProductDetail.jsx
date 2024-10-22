@@ -71,7 +71,7 @@ const ProductDetail = () => {
                             </div>
                         </div>
                         <div className="product-pin">
-                            <span>Malin kodu: 91119</span> {/* Məhsul kodu */}
+                            <span>Malın kodu: 91119</span> {/* Məhsul kodu */}
                         </div>
                         <ul className="stars">
                             <li><img src="https://irshad.az/images/svg-icons/starOrange.svg" alt="" /></li>
@@ -112,7 +112,7 @@ const ProductDetail = () => {
                         <p><b>Ekran:</b><span> {product.features.screen_size}</span></p>
                         <p><b>Yaddaş:</b><span> {product.features.storage}</span></p>
                         <p><b>Kamera:</b><span> {product.features.camera}</span></p>
-                        <p><b>Həminə:</b><span> {product.features.battery}</span></p>
+                        <p><b>Batareya həcmi:</b><span> {product.features.battery}</span></p>
                         
                     </div>
 
