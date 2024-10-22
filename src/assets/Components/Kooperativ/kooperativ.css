@@ -1,0 +1,158 @@
+.main-kooperativ h3{
+    font-size: 24px;
+    font-family: "Inter", sans-serif;
+    width: 86%;
+}
+.main-kooperativ p{
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+
+
+.main-kooperativ{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+}
+.qiymet-strategiya{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.kocurme-yolu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.numbers{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.numbers a, .poct-unvani a{
+    color: blue !important;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.numbers a:hover, .poct-unvani a:hover{
+    color: black !important;
+    cursor: pointer;
+}
+.title-kooperativ{
+    font-size: 36px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    /* width: 87%; */
+}
+.kooperativ{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+.kooperativ-container{
+    display: flex;
+    width: 87%;
+    flex-direction: column;
+    gap: 30px;
+}
+.img{
+    position: absolute;
+    right: 0;
+    top: 15%;
+}
+.img img{
+    width: 300px;
+    height: 300px;
+}
+.main-kooperativ{
+    position: relative;
+}
+.form-container {
+    width: 87%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+.form-1 {
+    display: flex;
+    justify-content: space-between;
+}
+.form-1 .form-group , .shirket .form-group{
+    width: 49%;
+}
+.shirket{
+    display: flex;
+    justify-content: space-between;
+}
+.submit{
+    width: 185px;
+    display: flex;
+    justify-content: center ;
+}
+
+.form-group {
+    margin-bottom: 15px;  
+    gap: 0px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+    color: #95979c;
+    font-size: 13px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+::placeholder{
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px !important;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color:#28a745;
+    border: 1px solid #28a745;
+    transition: 0.5s;
+}
+.button{
+    display: flex;
+    justify-content: end;
+}

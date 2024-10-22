@@ -34,7 +34,7 @@ const ProductDetail = () => {
             <Header />
             <div className='detail-container'>
                 <div className="top">
-                    <h1>{product.brand}</h1>
+                    <h1>{product.name}</h1>
                     <div className="button1">
                         <TbSmartHome style={{ fontSize: '20px' }} />
                         <span>Stokda var</span>

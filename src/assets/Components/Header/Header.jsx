@@ -140,7 +140,7 @@ const Header = () => {
                                 <a className='first3-lists' href=""> Mağazalar </a>
                             </li>
                             <li>
-                                <a className='first3-lists' href=""> Korporativ </a>
+                                <a onClick={() => navigate("/korporativ")} className='first3-lists' href=""> Korporativ </a>
                             </li>
                             <li className='icon-imgs'>
                                 <a href="">

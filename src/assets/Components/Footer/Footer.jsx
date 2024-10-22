@@ -63,7 +63,7 @@ const Footer = () => {
               <li><a href="">Haqqımızda</a></li>
               <li><a href="">Mağazalar</a></li>
               <li><a href="">Vakansiyalar</a></li>
-              <li><a href="">Kampaniyalar</a></li>
+              <li><a onClick={() => navigate("/kampaniyalar")} href="">Kampaniyalar</a></li>
               <li><a href="">Şərtlərimiz</a></li>
               <li><a href="">Çatdırılma qaydaları</a></li>
               <li><a href="">Bonuslardan istifadə qaydaları</a></li>
@@ -75,7 +75,7 @@ const Footer = () => {
               <li><a href="" onClick={() => navigate("/sual&cavab")}>Sual-Cavab</a></li>
               <li><a href="">Hissə-hissə ödəniş</a></li>
               <li><a href="">Məxfilik siyasəti</a></li>
-              <li><a href="">Korporativ satışlar</a></li>
+              <li><a onClick={() => navigate("/korporativ")} href="">Korporativ satışlar</a></li>
               <li><a href="">İstifadə qaydaları</a></li>
               <li><a href="">Bloq</a></li>
               <li><a href="" onClick={() => navigate("/shikayet&ve&teklifler")}>Şikayət və təkliflər</a></li>
