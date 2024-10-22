@@ -53,7 +53,7 @@ const ShexsiKabinet = () => {
                 </div>
                 <div className="shexsi-kabinet-login">
                     <h1><a>Giriş</a></h1>    
-                    <div class="form-group">
+                    <div class="form-groupp">
                         <div className='form'>
                             <label>Telefon</label>
                         <input name="phone" class="input" type="text" value="" id="mask-num" placeholder="+(994) (00) 000-00-00"></input>

@@ -65,6 +65,7 @@
     align-items: center;
     gap: 10px;
     border: none;
+    color: #232d40;
 }
 
 .language-dropdown {
@@ -130,18 +131,18 @@
     font-weight: 600;
 }
 
-.form-group .form label {
+.form-groupp .form label {
     color: #95979c;
     font-size: 13px;
     margin-bottom: .8rem;
     font-family: "Inter", sans-serif;
 }
 
-.form-group .form{
+.form-groupp .form{
    display: flex;
    flex-direction: column;
 }
-.form-group .form input {
+.form-groupp .form input {
     border-color: #dadbdd;
     background: #fff;
     font-weight: 500;
@@ -153,17 +154,17 @@
     outline: none;
 }
 
-.form-group input::placeholder {
+.form-groupp input::placeholder {
     color: #C6C0C5;
 }
 
-.form-group {
+.form-groupp {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form-group button {
+.form-groupp button {
     color: #fff;
     background: #40b659;
     border-radius: 6px;
@@ -177,7 +178,7 @@
     width: 425px;
 }
 
-.form-group button:hover {
+.form-groupp button:hover {
     color: #40b659;
     background-color: #fff;
     border: 1px solid #40b659;
