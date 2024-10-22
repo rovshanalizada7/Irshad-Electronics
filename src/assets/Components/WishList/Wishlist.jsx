@@ -63,7 +63,7 @@ const Wishlist = () => {
 
                 <div className="favorite-top">
                     <span style={{ color: "#232d40", fontSize: "28px" }}>Bəyəndiklərim</span>
-                    <button className='addToBasket' onClick={addAllToCart}>
+                    <button style={{width:"340px",height:"55px",borderRadius:"15px"}} className='addToBasket' onClick={addAllToCart}>
                         <MdOutlineShoppingCart style={{ fontSize: "23px" }} /> Bütün məhsulları səbətə əlavə et
                     </button>
                 </div>
