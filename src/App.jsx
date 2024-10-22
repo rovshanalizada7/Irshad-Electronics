@@ -9,6 +9,7 @@ import Sual from './assets/Components/Sual/Sual'
 import Sikayet from './assets/Components/Sikayet/Sikayet'
 import ProductDetail from './assets/Components/ProductDetail/ProductDetail'
 import Kooperativ from './assets/Components/Kooperativ/Kooperativ'
+import Magazalar from './assets/Components/Magazalar/Magazalar'
 
 function App() {
 
@@ -25,6 +26,8 @@ function App() {
           <Route exact path='/shikayet&ve&teklifler' element={<Sikayet />} />
           <Route exact path='/sual&cavab' element={<Sual />} />
           <Route exact path='/korporativ' element={<Kooperativ/>}/>
+          <Route exact path='/magazalar' element={<Magazalar/>}/>
+          
         </Routes>
       </BrowserRouter>
     </>

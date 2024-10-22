@@ -61,7 +61,7 @@ const Footer = () => {
             <h3>Şirkət</h3>
             <ul>
               <li><a href="">Haqqımızda</a></li>
-              <li><a href="">Mağazalar</a></li>
+              <li><a onClick={() => navigate("/magazalar")} href="">Mağazalar</a></li>
               <li><a href="">Vakansiyalar</a></li>
               <li><a onClick={() => navigate("/kampaniyalar")} href="">Kampaniyalar</a></li>
               <li><a href="">Şərtlərimiz</a></li>

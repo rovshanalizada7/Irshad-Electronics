@@ -137,7 +137,7 @@ const Header = () => {
                                 <a onClick={() => navigate("/kampaniyalar")} className='first3-lists' href=""> Kampaniyalar </a>
                             </li>
                             <li>
-                                <a className='first3-lists' href=""> Mağazalar </a>
+                                <a onClick={() => navigate("/magazalar")} className='first3-lists' href=""> Mağazalar </a>
                             </li>
                             <li>
                                 <a onClick={() => navigate("/korporativ")} className='first3-lists' href=""> Korporativ </a>
