@@ -56,6 +56,7 @@ footer .foot-container .foot-qr p{
 
 footer .foot-center{
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin: 20px 30px;
     padding-right: 30px;
@@ -104,6 +105,7 @@ footer .foot-right .right-cont{
     padding:0px 30px ; */
     margin-left: 20px;
     display: flex;
+    flex-wrap: wrap;
     gap: 23px;
     justify-content: center;
     align-items: center;
@@ -115,7 +117,7 @@ footer .foot-right .right-cont::after{
     content: "";
     top: 90%;
     border-top: 1px solid #545454;
-    width: 360px;
+    width: 50%;
 }
 
 footer .foot-right .right-cont p{
@@ -131,7 +133,7 @@ footer .foot-right .right-cont p{
 }
 
 footer .social{
-
+    
     margin-top: 20px;
 }
 
@@ -140,7 +142,10 @@ footer .social h3{
 }
 
 footer .social .social-icons{
+  width: 100%;
+  justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     font-size: 27px;
     margin: 20px 20px 10px;
@@ -176,6 +181,11 @@ footer .foot-bottom p a{
     color: rgb(214, 214, 214);
     transition:.5s;
     text-underline-offset: 8px;
+}
+
+footer .tel{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer .foot-bottom p a:hover{

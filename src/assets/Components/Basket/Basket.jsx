@@ -7,16 +7,22 @@ import './basket.css';
 
 const Basket = () => {
     const [cartItems, setCartItems] = useState([]);
+    const [deletedItems, setDeletedItems] = useState([]);
 
     useEffect(() => {
         const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const storedDeletedItems = JSON.parse(localStorage.getItem('deletedItems')) || [];
         setCartItems(storedCartItems);
+        setDeletedItems(storedDeletedItems);
     }, []);
 
     const removeItem = (id) => {
+        const itemToDelete = cartItems.find(item => item.id === id);
         const updatedItems = cartItems.filter(item => item.id !== id);
         setCartItems(updatedItems);
+        setDeletedItems([...deletedItems, itemToDelete]);
         localStorage.setItem('cart', JSON.stringify(updatedItems));
+        localStorage.setItem('deletedItems', JSON.stringify([...deletedItems, itemToDelete]));
     };
 
     const updateQuantity = (id, quantity) => {
@@ -28,6 +34,13 @@ const Basket = () => {
         });
         setCartItems(updatedItems);
         localStorage.setItem('cart', JSON.stringify(updatedItems));
+    };
+
+    const restoreDeletedItems = () => {
+        setCartItems([...cartItems, ...deletedItems]);
+        setDeletedItems([]);
+        localStorage.setItem('cart', JSON.stringify([...cartItems, ...deletedItems]));
+        localStorage.setItem('deletedItems', JSON.stringify([]));
     };
 
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -46,7 +59,7 @@ const Basket = () => {
                         {cartItems.length > 0 ? (
                             cartItems.map((item) => (
                                 <div key={item.id} className="cart-item">
-                                    <img src={item.image} alt={item.title} className="cart-item-image" />
+                                    <img src={item.image} alt={item.name} className="cart-item-image" />
                                     <div className="cart-item-info">
                                         <h4>{item.name}</h4>
                                         <p>{item.price} AZN</p>
@@ -78,6 +91,14 @@ const Basket = () => {
                         <button className="checkout-btn">Sifarişi rəsmiləşdir</button>
                     </div>
                 </div>
+
+                {deletedItems.length > 0 && (
+                    <div className="deleted-items-section">
+                        <button onClick={restoreDeletedItems} className="restore-btn">
+                            {deletedItems.length} məhsul silinib. Geri qaytar.
+                        </button>
+                    </div>
+                )}
             </section>
             <Footer />
         </div>
